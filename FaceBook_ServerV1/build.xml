@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project basedir="." default="help" name="FaceBook_ServerV1">    
+	<property environment="env"/>
+	<property name="source.dir" location="src"/>
+   	<property name="build.dir" location="bin"/>
+	<property name="classpath" location="${build.dir}"/>
+	<property name="server.port" value="8001"/>
+
+	<target name="help">
+			<echo>Usage: ant [build | server]</echo>
+		</target>	
+	
+	<target name="build" description="Builds the project">
+		<delete dir="${build.dir}"/>
+		<mkdir dir="${build.dir}"/>
+		<javac srcdir="${source.dir}" destdir="${build.dir}" classpath="${classpath}" deprecation="true" fork="true" includeAntRuntime="no"/>
+    </target>
+
+	<target name="server" depends="build" description="Runs the Server">
+		<java classname="f.server.FacebookServer" classpath="${classpath}" fork="true">
+	 		<arg value="${server.port}"/> 
+        </java>
+    </target>
+</project>
