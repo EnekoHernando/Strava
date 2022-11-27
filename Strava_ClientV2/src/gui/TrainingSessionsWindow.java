@@ -9,6 +9,7 @@ import java.util.Vector;
 
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JPanel;
 import javax.swing.JTabbedPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
@@ -26,16 +27,20 @@ public class TrainingSessionsWindow extends JFrame{
 	private DefaultTableModel dataModel;
 	private JLabel name;
 	private Vector<String> headers=null;
+	private JPanel buttons;
 	public TrainingSessionsWindow(TrainingSessionController tsc) {
 		this.controller = tsc;
 		dataT=new JTable();
+		buttons = new JPanel();
 		tsc.createTrainingSession(tsc.getUser(), "Sesion1", SportDTO.RUNNING, 10, new Date(System.currentTimeMillis()), new Date( System.currentTimeMillis()+24*3600000L), 2);
 		headers = new Vector<String>( Arrays.asList( "Ttile", "sport", "Start Date-End Date", "Distance-Time") );
 		dataModel = new DefaultTableModel(  
 			new Vector<Vector<Object>>(),  
 			headers  
 		);
+		
 		for (TrainingSessionDTO c : controller.getSessions(controller.getUser())) {
+			System.out.println("Traininn session ::::::" + c);
 			dataModel.addRow( new Object[] {c.getTitle(), c.getSport(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getFinishDate()), c.getDistance() + " km - "+c.getDuration()+" min"} );
 		}
 		dataT.setModel(dataModel);
