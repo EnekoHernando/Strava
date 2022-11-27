@@ -10,7 +10,6 @@ public class UserDTO implements Serializable {
 	//This attribute is needed to implement the "Serializable" interface.
 	private static final long serialVersionUID = 1L;
 	private String email;
-	private String password;
 	private Date birthdate;
 	private float weight;
 	private float height;
@@ -51,13 +50,6 @@ public class UserDTO implements Serializable {
 
 	public void setToken(long token) {
 		this.token = token;
-	}
-	public boolean checkPassword(String password) {
-		return this.password.equals(password);
-	}
-	
-	public void setPassword(String password) {
-		this.password = password;
 	}
 	
 	public String getEmail() {
@@ -106,10 +98,7 @@ public class UserDTO implements Serializable {
 	public void setHeartRateAtRest(int heartRateAtRest) {
 		this.heartRateAtRest = heartRateAtRest;
 	}
-
-	public String getPassword() {
-		return password;
-	}
+	
 	@Override
 	public String toString() {
 		StringBuffer result = new StringBuffer();
