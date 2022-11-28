@@ -24,7 +24,6 @@ public class GateWayGoogle implements IGateWay{
 	@Override
 	public boolean register(String email, String password) {
 		try {
-			System.out.println("Google gate way register.");//BORRAR
 			return this.service.register(email, password);
 		} catch (Exception e) {
 			System.out.println("# Error registerin with google: " + e);
@@ -35,7 +34,6 @@ public class GateWayGoogle implements IGateWay{
 	public boolean logIn(String email, String password) {
 		try {
 			boolean ans =this.service.login(email, password);
-			System.out.println("GateWay answer: " + ans); //BORRAR
 			return ans;
 		} catch (Exception e) {
 			System.out.println("# Error login in with google: " + e);
