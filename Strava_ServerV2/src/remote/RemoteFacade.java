@@ -34,11 +34,11 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	private Map<Long, User> serverState = new HashMap<>(); //Map with the users.
 	private List<Challenge> challenges= new ArrayList<>(); //All challenges created by the community.
 	
-	public RemoteFacade(String ip, String gport, String gname, int fport) throws RemoteException {
-		this.ip =ip;
-		this.gport = gport;
-		this.gname = gname;
-		this.fport = fport;
+	public RemoteFacade(String[] args) throws RemoteException {
+		this.ip =args[0];
+		this.gport = args[1];
+		this.gname = args[2];
+		this.fport = Integer.parseInt(args[3]);
 	}
 	/**
 	 * Returns the sessions of the user that has logged in

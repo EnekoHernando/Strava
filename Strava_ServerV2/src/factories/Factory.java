@@ -6,6 +6,7 @@ import gateways.IGateWay;
 
 public class Factory {
 	private static Factory service;
+	private Factory() {}
 	public static Factory getInstance() {
 		if(service == null) {
 			service= new Factory();

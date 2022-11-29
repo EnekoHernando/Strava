@@ -1,6 +1,5 @@
-/data/
-/factories/
-/gateways/
 /remote/
 /server/
+/data/
+/gateways/
 /services/

@@ -18,7 +18,7 @@ public class MP {
 		//Bind remote facade instance to a sirvice name using RMIRegistry
 		try {
 			System.out.println(args[0] + " "+ args[1] + " "+args[3]+" "+Integer.parseInt(args[4]));
-			IRemoteFacade remoteFacade = new RemoteFacade(args[0], args[1], args[3], Integer.parseInt(args[4]));			
+			IRemoteFacade remoteFacade = new RemoteFacade(args);			
 			Naming.rebind(name, remoteFacade);
 			System.out.println(" * Strava '" + name + "' started!!");
 		} catch (Exception ex) {

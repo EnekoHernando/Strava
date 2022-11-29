@@ -7,6 +7,8 @@ import g.remote.IRemoteFacadeGoogle;
 public class GateWayGoogle implements IGateWay{
 	private static GateWayGoogle instance;
 	private IRemoteFacadeGoogle service;
+	
+	
 	public GateWayGoogle(String ip, String gport, String gname) {
 		try {
 			String URL = "//"+ip+":"+gport+"/"+gname;
