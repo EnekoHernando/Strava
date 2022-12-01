@@ -1,6 +1,9 @@
 package data.domain;
 
+import java.util.ArrayList;
 import java.util.Date;
+import java.util.List;
+
 
 public class Challenge {
 	private String name;
@@ -10,6 +13,7 @@ public class Challenge {
 	private int targetTime;
 	private Sport sport;
 	private User creator;
+	public List<TrainingSession> trss = new ArrayList<>(); 
 	
 	public String getName() {
 		return name;
