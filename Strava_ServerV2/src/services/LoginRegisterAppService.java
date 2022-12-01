@@ -19,8 +19,8 @@ public class LoginRegisterAppService{
 		}
 		return instance;
 	}
-	public User login(String email, String password, String type, String ip, String gport, String gname, int fport) {
-		if(Factory.getInstance().createGateWay(type, ip, gport, gname, fport)!=null && Factory.getInstance().createGateWay(type, ip, gport, gname, fport).logIn(email, password)) {
+	public User login(String email, String password, String type, String [] args) {
+		if(Factory.getInstance().createGateWay(type, args)!=null && Factory.getInstance().createGateWay(type, args).logIn(email, password)) {
 			return historicUsers.get(email);
 		}
 		if(this.historicUsers.containsKey(email) && this.historicUsers.get(email).getPassword().equals(org.apache.commons.codec.digest.DigestUtils.sha1Hex(password))) {
@@ -29,9 +29,9 @@ public class LoginRegisterAppService{
 		return null;
 	}
 	
-	public User register(String email,String password, Date birth, float weight, int height, int maxHeartRate, int heartRateAtRest, String type, String ip, String gport, String gname, int fport) {
+	public User register(String email,String password, Date birth, float weight, int height, int maxHeartRate, int heartRateAtRest, String type, String [] args) {
 		User user = new User();
-		if(Factory.getInstance().createGateWay(type, ip, gport, gname, fport)!=null && Factory.getInstance().createGateWay(type, ip, gport, gname, fport).register(email, password)) {
+		if(Factory.getInstance().createGateWay(type, args)!=null && Factory.getInstance().createGateWay(type, args).register(email, password)) {
 				user.setEmail(email);
 				if(type.equals("Normal")) user.setPassword(org.apache.commons.codec.digest.DigestUtils.sha1Hex(password));
 				else user.setPassword("");

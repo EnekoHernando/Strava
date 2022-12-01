@@ -13,12 +13,12 @@ public class Factory {
 		}
 		return service;
 	}
-	public IGateWay createGateWay(String type, String ip, String gport, String gname, int fport) {
+	public IGateWay createGateWay(String type, String[] args ) {
 		switch (type) {
 			case "Google":
-				return GateWayGoogle.getInstance(ip, gport, gname);			
+				return GateWayGoogle.getInstance("//"+args[0]+":"+args[1]+"/"+args[2]);			
 			case "Facebook":
-				return GateWayFacebook.getInstance(ip, fport);
+				return GateWayFacebook.getInstance(args[0], args[3]);
 			default:
 				return null;
 		}

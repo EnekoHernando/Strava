@@ -13,9 +13,9 @@ public class GateWayFacebook implements IGateWay{
 	private int serverPort;
 	private static String DELIMITER = "#";
 	
-	public static GateWayFacebook getInstance(String ip, int fport) {
+	public static GateWayFacebook getInstance(String ip, String fport) {
 		if(instance==null) {
-			instance = new GateWayFacebook(ip, fport);
+			instance = new GateWayFacebook(ip,Integer.parseInt(fport));
 		}
 		return instance;
 	}

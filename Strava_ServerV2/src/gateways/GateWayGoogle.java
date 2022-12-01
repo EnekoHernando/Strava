@@ -9,17 +9,16 @@ public class GateWayGoogle implements IGateWay{
 	private IRemoteFacadeGoogle service;
 	
 	
-	public GateWayGoogle(String ip, String gport, String gname) {
+	public GateWayGoogle(String URL) {
 		try {
-			String URL = "//"+ip+":"+gport+"/"+gname;
 			this.service = (IRemoteFacadeGoogle) Naming.lookup(URL);
 		} catch (Exception ex) {
 			System.err.println("# Error locating remote facade: " + ex);
 		}		
 	}
-	public static GateWayGoogle getInstance(String ip, String gport, String gname) {
+	public static GateWayGoogle getInstance(String URL) {
 		if(instance == null) {
-			instance = new GateWayGoogle(ip, gport, gname);
+			instance = new GateWayGoogle(URL);
 		}
 		return instance;
 	}

@@ -19,7 +19,6 @@ import data.dto.TrainingSessionAssembler;
 import data.dto.TrainingSessionDTO;
 import data.dto.UserAssembler;
 import data.dto.UserDTO;
-import gateways.GateWayGoogle;
 import services.ChallengeAppService;
 import services.LoginRegisterAppService;
 import services.TrainingAppSessionService;
@@ -27,18 +26,12 @@ import services.TrainingAppSessionService;
 public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {	
 	private static final long serialVersionUID = 1L;
 	//Data structure for manage Server State
-	private String ip;
-	private String gport;
-	private String gname;
-	private int fport;
+	private String[] args;
 	private Map<Long, User> serverState = new HashMap<>(); //Map with the users.
 	private List<Challenge> challenges= new ArrayList<>(); //All challenges created by the community.
 	
 	public RemoteFacade(String[] args) throws RemoteException {
-		this.ip =args[0];
-		this.gport = args[1];
-		this.gname = args[2];
-		this.fport = Integer.parseInt(args[3]);
+		this.args = args;
 	}
 	/**
 	 * Returns the sessions of the user that has logged in
@@ -110,7 +103,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	@Override
 	public synchronized UserDTO login(String email, String password, String type) throws RemoteException {
 		System.out.println(" * RemoteFacade login: " + email + " / " + password);
-		User user = LoginRegisterAppService.getInstance().login(email, password, type, ip, gport, gname ,fport);
+		User user = LoginRegisterAppService.getInstance().login(email, password, type, args);
 		if (user != null) {
 			user.setToken(System.currentTimeMillis());
 			this.serverState.put(user.getToken(), user);
@@ -121,7 +114,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	@Override
 	public UserDTO register(String type, String email,String password, Date birth, float weight, int height, int maxHeartRate, int heartRateAtRest)
 			throws RemoteException {
-		User user = LoginRegisterAppService.getInstance().register(email, password, birth, weight, height, maxHeartRate, heartRateAtRest, type, ip, gport, gname, fport);
+		User user = LoginRegisterAppService.getInstance().register(email, password, birth, weight, height, maxHeartRate, heartRateAtRest, type, args);
 		if(user != null) {
 			Long token = System.currentTimeMillis();
 			user.setToken(token);
