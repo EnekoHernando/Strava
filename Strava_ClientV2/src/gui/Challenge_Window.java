@@ -1,21 +1,17 @@
 package gui;
 
 import java.awt.BorderLayout;
-import java.awt.GridBagLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
-import java.util.List;
 import java.util.Vector;
 
 import javax.swing.JButton;
-import javax.swing.JCheckBox;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
@@ -30,7 +26,6 @@ import controllers.ChallengeController;
 import controllers.TrainingSessionController;
 import data.dto.ChallengeDTO;
 import data.dto.SportDTO;
-import data.dto.UserDTO;
 
 	
 //POSSIBLY WILL BE UPGRADED
@@ -113,8 +108,7 @@ public class Challenge_Window extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				TrainingSessionController tsc = new TrainingSessionController(controller.getService());
-				tsc.setUser(controller.getUser());
-				TrainingSessionsWindow tsw = new TrainingSessionsWindow(tsc);				
+				tsc.setUser(controller.getUser());			
 			}
 		});
 		logOut = new JButton("Log out.");

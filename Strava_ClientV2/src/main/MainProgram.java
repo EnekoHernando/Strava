@@ -1,12 +1,6 @@
 package main;
 
-import java.text.ParseException;
-import java.text.SimpleDateFormat;
-import java.util.Date;
-
-import controllers.ChallengeController;
 import controllers.LoginController;
-import data.dto.UserDTO;
 import gui.LogIn_Window;
 import remote.ServiceLocator;
 public class MainProgram {
@@ -22,6 +16,6 @@ public class MainProgram {
 		//Date date = new Date(System.currentTimeMillis()-24*3600000L);
 		//loginController.register("Google","eneko@gmail.com", "1234",date.getTime(), 100, 173, 120, 70);
 		//loginController.register("Google", "asieruli@gmail.com", "abcd",date.getTime(), 100, 173, 120, 70);
-		LogIn_Window logW = new LogIn_Window(loginController);
+		new LogIn_Window(loginController);
 	}
 }

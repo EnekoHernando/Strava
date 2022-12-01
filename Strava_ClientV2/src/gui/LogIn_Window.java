@@ -1,7 +1,6 @@
 package gui;
 
 import java.awt.BorderLayout;
-import java.awt.FlowLayout;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -23,7 +22,6 @@ import javax.swing.JTextField;
 
 import controllers.ChallengeController;
 import controllers.LoginController;
-import controllers.TrainingSessionController;
 import data.dto.UserDTO;
 
 
@@ -144,7 +142,7 @@ public class LogIn_Window extends JFrame{
 					if(user!=null) {
 						ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 						cc.setUser(user);
-						Challenge_Window cw = new Challenge_Window(cc, instance);
+						new Challenge_Window(cc, instance);
 						setVisible(false);
 					}else {
 						JOptionPane.showMessageDialog(null, "You must register", "Error Loggin in", JLabel.ERROR);
@@ -160,7 +158,7 @@ public class LogIn_Window extends JFrame{
 				if(user!=null) {
 					ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 					cc.setUser(user);
-					Challenge_Window cw = new Challenge_Window(cc, instance);
+					new Challenge_Window(cc, instance);
 					setVisible(false);
 				}else {
 					JOptionPane.showMessageDialog(null, "You must register", "Error Loggin in", JLabel.ERROR);
@@ -175,7 +173,7 @@ public class LogIn_Window extends JFrame{
 				if(user!=null) {
 					ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 					cc.setUser(user);
-					Challenge_Window cw = new Challenge_Window(cc, instance);
+					new Challenge_Window(cc, instance);
 					setVisible(false);
 				}else {
 					JOptionPane.showMessageDialog(null, "You must register", "Error Loggin in", JLabel.ERROR);
@@ -240,7 +238,7 @@ public class LogIn_Window extends JFrame{
 					if(user!=null) {
 						ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 						cc.setUser(user);
-						Challenge_Window cw = new Challenge_Window(cc, instance);
+						new Challenge_Window(cc, instance);
 						setVisible(false);
 					}else {
 						JOptionPane.showMessageDialog(null, "That user already exist, Log in", "Error registering", JLabel.ERROR);
@@ -256,7 +254,7 @@ public class LogIn_Window extends JFrame{
 				if(user!=null) {
 					ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 					cc.setUser(user);
-					Challenge_Window cw = new Challenge_Window(cc, instance);
+					new Challenge_Window(cc, instance);
 					setVisible(false);
 				}else {
 					JOptionPane.showMessageDialog(null, "You must register", "Error Loggin in", JLabel.ERROR);
@@ -271,7 +269,7 @@ public class LogIn_Window extends JFrame{
 				if(user!=null) {
 					ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 					cc.setUser(user);
-					Challenge_Window cw = new Challenge_Window(cc, instance);
+					new Challenge_Window(cc, instance);
 					setVisible(false);
 				}else {
 					JOptionPane.showMessageDialog(null, "You must register", "Error Loggin in", JLabel.ERROR);

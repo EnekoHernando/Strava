@@ -6,7 +6,6 @@ import data.domain.Challenge;
 import data.domain.Sport;
 import data.domain.User;
 import data.dto.ChallengeDTO;
-import data.dto.UserDTO;
 
 public class ChallengeAppService {
 	//Instance for the Singleton Pattern
@@ -35,6 +34,7 @@ public class ChallengeAppService {
 			System.out.println("ChallengeService new challenge: " + ch);
 			return ch;
 		}
+		@SuppressWarnings("unlikely-arg-type")
 		public boolean equals(ChallengeDTO chC, Challenge ch){
 			return chC.getName().equals(ch.getName()) && chC.getSport().equals(ch.getSport()); 
 		}

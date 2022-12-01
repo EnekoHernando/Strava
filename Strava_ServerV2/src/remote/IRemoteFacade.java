@@ -5,7 +5,6 @@ import java.rmi.RemoteException;
 import java.util.Date;
 import java.util.List;
 
-import data.domain.User;
 import data.dto.ChallengeDTO;
 import data.dto.SportDTO;
 import data.dto.TrainingSessionDTO;
