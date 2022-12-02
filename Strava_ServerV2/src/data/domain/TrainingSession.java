@@ -3,15 +3,26 @@ package data.domain;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.Join;
 
+@PersistenceCapable(detachable="true")
 public class TrainingSession {
+	@Persistent(defaultFetchGroup="true")
+	@Join
 	private User owner;
 	private String title;
+	@Persistent(defaultFetchGroup="true")
+	@Join
 	private Sport sport;
 	private int distance;
 	private Date startDate;
 	private Date finishDate;
 	private int duration;
+	
+	@Persistent(defaultFetchGroup = "true", mappedBy="trss", dependentElement = "true")
+	@Join
 	private List<Challenge> challenges = new ArrayList<>();
 
 	public List<Challenge> getChallenges() {

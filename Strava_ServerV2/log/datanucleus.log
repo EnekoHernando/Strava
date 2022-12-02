@@ -1,0 +1,447 @@
+10:59:58,848 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+10:59:58,920 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+10:59:58,925 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+10:59:58,928 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+10:59:58,938 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+10:59:58,938 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:00:20,558 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:00:20,628 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:00:20,632 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+11:00:20,635 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:00:20,639 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:00:20,639 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:00:20,962 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+11:00:20,962 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:00:20,962 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:00:20,962 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:00:20,962 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:00:20,962 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:00:20,963 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:00:20,963 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:00:20,963 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:00:20,963 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:00:20,963 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:00:20,963 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:00:20,965 (main) ERROR [DataNucleus.SchemaTool] - Error creating NucleusContext
+No se puede leer el archivo de propiedades "datanucleus.properties"
+org.datanucleus.exceptions.NucleusUserException: No se puede leer el archivo de propiedades "datanucleus.properties"
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:693)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	... 1 more
+Nested Throwables StackTrace:
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+11:06:40,616 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:06:40,693 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:06:40,698 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+11:06:40,702 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:06:40,706 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:06:40,707 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:06:40,996 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:06:40,997 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:06:40,999 (main) ERROR [DataNucleus.SchemaTool] - Error creating NucleusContext
+No se puede leer el archivo de propiedades "datanucleus.properties"
+org.datanucleus.exceptions.NucleusUserException: No se puede leer el archivo de propiedades "datanucleus.properties"
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:693)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+Caused by: java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	... 1 more
+Nested Throwables StackTrace:
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+11:08:03,829 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:08:03,916 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:08:03,922 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+11:08:03,927 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:08:03,936 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:08:03,936 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:08:04,463 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+11:08:04,463 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:08:04,464 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:08:04,466 (main) ERROR [DataNucleus.SchemaTool] - Error creating NucleusContext
+No se puede leer el archivo de propiedades "datanucleus.properties"
+org.datanucleus.exceptions.NucleusUserException: No se puede leer el archivo de propiedades "datanucleus.properties"
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:693)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+Caused by: 
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	... 1 more
+Nested Throwables StackTrace:
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+11:10:33,575 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:10:33,721 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:10:33,727 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+11:10:33,735 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:10:33,748 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:10:33,749 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:10:34,498 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:10:34,499 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:10:34,503 (main) ERROR [DataNucleus.SchemaTool] - Error creating NucleusContext
+No se puede leer el archivo de propiedades "datanucleus.properties"
+org.datanucleus.exceptions.NucleusUserException: No se puede leer el archivo de propiedades "datanucleus.properties"
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:693)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+Caused by: 
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	... 1 more
+Nested Throwables StackTrace:
+java.lang.NullPointerException: inStream parameter is null
+	at java.base/java.util.Objects.requireNonNull(Objects.java:233)
+	at java.base/java.util.Properties.load(Properties.java:407)
+	at org.datanucleus.Configuration.getPropertiesFromPropertiesFile(Configuration.java:687)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:294)
+11:14:00,038 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:14:00,125 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:14:00,130 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+11:14:00,136 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:14:00,143 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:14:00,143 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:14:00,692 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:14:00,693 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+11:14:01,480 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+11:14:01,481 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+11:14:01,601 (main) ERROR [DataNucleus.Datastore.Schema] - Una excepcion estaba tirada durante la addicion/validacion de algunas class(es) : La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+
+La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+
+org.datanucleus.exceptions.NucleusException: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:673)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+Caused by: org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	... 10 more
+Nested Throwables StackTrace:
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+
+11:14:01,602 (main) ERROR [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha lanzado una excepción. Por favor consulte el Log para ver más detalles: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+
+La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+
+org.datanucleus.exceptions.NucleusException: La generación del nuevo tipo de Mapping org.datanucleus.store.rdbms.mapping.java.CollectionMapping ha fallada : Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:673)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+Caused by: 
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	... 10 more
+Nested Throwables StackTrace:
+Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+org.datanucleus.exceptions.NucleusUserException: Clase "data.domain.User" campo "challengeAL" : tiene "mapped-by" de "user". Este campo no existe en el otro lado de la relación ("data.domain.Challenge")!!
+	at org.datanucleus.metadata.AbstractMemberMetaData.setRelation(AbstractMemberMetaData.java:2712)
+	at org.datanucleus.metadata.AbstractMemberMetaData.getRelatedMemberMetaData(AbstractMemberMetaData.java:2975)
+	at org.datanucleus.store.rdbms.identifier.DNIdentifierFactory.newTableIdentifier(DNIdentifierFactory.java:133)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.addJoinTableForContainer(RDBMSStoreManager.java:3741)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.newJoinTable(RDBMSStoreManager.java:2895)
+	at org.datanucleus.store.rdbms.mapping.java.AbstractContainerMapping.initialize(AbstractContainerMapping.java:85)
+	at org.datanucleus.store.rdbms.mapping.MappingManagerImpl.getMapping(MappingManagerImpl.java:663)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageMembers(ClassTable.java:648)
+	at org.datanucleus.store.rdbms.table.ClassTable.manageClass(ClassTable.java:554)
+	at org.datanucleus.store.rdbms.table.ClassTable.initializeForClass(ClassTable.java:1380)
+	at org.datanucleus.store.rdbms.table.ClassTable.initialize(ClassTable.java:273)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.initializeClassTables(RDBMSStoreManager.java:3393)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager$ClassAdder.run(RDBMSStoreManager.java:3016)
+	at org.datanucleus.store.rdbms.AbstractSchemaTransaction.execute(AbstractSchemaTransaction.java:118)
+	at org.datanucleus.store.rdbms.RDBMSStoreManager.createSchemaForClasses(RDBMSStoreManager.java:3866)
+	at org.datanucleus.store.schema.SchemaTool.createSchemaForClasses(SchemaTool.java:505)
+	at org.datanucleus.store.schema.SchemaTool.main(SchemaTool.java:421)
+11:20:24,988 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:20:25,065 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:20:25,070 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+11:20:25,074 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:20:25,077 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:20:25,078 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:20:35,558 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:20:35,636 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:20:35,640 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class" con definicion enhanced
+11:20:35,644 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:20:35,648 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:20:35,648 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 4 clases.
+11:20:35,967 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+11:20:35,968 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:20:35,968 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:20:35,969 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+11:20:36,712 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+11:20:36,713 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+11:20:36,890 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:20:36,890 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:20:36,918 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:20:36,941 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:20:37,601 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito

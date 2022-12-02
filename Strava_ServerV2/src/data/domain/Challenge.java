@@ -4,15 +4,25 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 
+@PersistenceCapable(detachable = "true")
 public class Challenge {
 	private String name;
 	private Date startDate;
 	private Date endDate;
 	private float targetDistance;
 	private int targetTime;
+	@Persistent(defaultFetchGroup="true")
+	@Join
 	private Sport sport;
+	@Persistent(defaultFetchGroup="true")
+	@Join
 	private User creator;
+	@Persistent(defaultFetchGroup="true", mappedBy="challenges", dependentElement = "false")
+	@Join
 	public List<TrainingSession> trss = new ArrayList<>(); 
 	
 	public String getName() {

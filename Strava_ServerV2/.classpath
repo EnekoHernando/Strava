@@ -8,5 +8,12 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="lib" path="lib/commons-codec-1.15.jar"/>
 	<classpathentry kind="lib" path="lib/Google.jar"/>
+	<classpathentry kind="lib" path="lib/datanucleus-api-jdo-6.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/datanucleus-cache-6.0.0-release.jar"/>
+	<classpathentry kind="lib" path="lib/datanucleus-core-6.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/datanucleus-rdbms-6.0.1.jar"/>
+	<classpathentry kind="lib" path="lib/javax.jdo-3.2.1.jar"/>
+	<classpathentry kind="lib" path="lib/log4j-1.2.14.jar"/>
+	<classpathentry kind="lib" path="lib/mysql-connector-java-8.0.29.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

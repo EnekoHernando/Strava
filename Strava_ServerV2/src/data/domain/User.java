@@ -4,6 +4,11 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
+
+@PersistenceCapable(detachable = "true")
 public class User {	
 	//Attributes: email, password, birthdate, 
 	//and optionally: weight(kg), height(cm), maxHeartRate and heartRateAtRest(number of beats per minute).
@@ -15,8 +20,16 @@ public class User {
 	private int height=0;
 	private int maxHeartRate=0;
 	private int heartRateAtRest=0;
+	
+	@Persistent(defaultFetchGroup="true", mappedBy="creator", dependentElement = "true")
+	@Join
 	private List<Challenge> challengeAL = new ArrayList<Challenge>();
+	
+	@Persistent(defaultFetchGroup="true", mappedBy="creator", dependentElement = "true")
+	@Join
 	private List<Challenge> challengeCL = new ArrayList<Challenge>();
+	@Persistent(defaultFetchGroup="true", mappedBy="owner", dependentElement = "true")
+	@Join
 	private List<TrainingSession> traininSL = new ArrayList<TrainingSession>();
 	
 	public List<Challenge> getChallengeAL() {
