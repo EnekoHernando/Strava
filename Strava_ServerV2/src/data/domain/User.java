@@ -21,11 +21,11 @@ public class User {
 	private int maxHeartRate=0;
 	private int heartRateAtRest=0;
 	
-	@Persistent(defaultFetchGroup="true", mappedBy="creator", dependentElement = "true")
+	@Persistent(defaultFetchGroup="true", mappedBy="name", dependentElement = "true")
 	@Join
 	private List<Challenge> challengeAL = new ArrayList<Challenge>();
 	
-	@Persistent(defaultFetchGroup="true", mappedBy="creator", dependentElement = "true")
+	@Persistent(defaultFetchGroup="true", mappedBy="name", dependentElement = "true")
 	@Join
 	private List<Challenge> challengeCL = new ArrayList<Challenge>();
 	@Persistent(defaultFetchGroup="true", mappedBy="owner", dependentElement = "true")
