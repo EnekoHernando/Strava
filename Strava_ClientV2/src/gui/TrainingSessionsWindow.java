@@ -27,7 +27,6 @@ public class TrainingSessionsWindow extends JFrame{
 	public TrainingSessionsWindow(TrainingSessionController tsc) {
 		this.controller = tsc;
 		dataT=new JTable();
-		tsc.createTrainingSession(tsc.getUser(), "Sesion1", SportDTO.RUNNING, 10, new Date(System.currentTimeMillis()), new Date( System.currentTimeMillis()+24*3600000L), 2);
 		headers = new Vector<String>( Arrays.asList( "Ttile", "sport", "Start Date-End Date", "Distance-Time") );
 		dataModel = new DefaultTableModel(  
 			new Vector<Vector<Object>>(),  
@@ -39,7 +38,7 @@ public class TrainingSessionsWindow extends JFrame{
 			dataModel.addRow( new Object[] {c.getTitle(), c.getSport(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getFinishDate()), c.getDistance() + " km - "+c.getDuration()+" min"} );
 		}
 		dataT.setModel(dataModel);
-		name = new JLabel();
+		name = new JLabel(tsc.getUser().getEmail());
 		getContentPane().setLayout(new GridLayout(2,0));
 		getContentPane().add(name,BorderLayout.NORTH);
 		getContentPane().add(dataT, BorderLayout.CENTER);

@@ -5,24 +5,37 @@ import java.util.Date;
 import java.util.List;
 
 import javax.jdo.annotations.Join;
+import javax.jdo.annotations.Order;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.Extension;
 
 @PersistenceCapable(detachable = "true")
 public class Challenge {
+	
 	private String name;
 	private Date startDate;
 	private Date endDate;
 	private float targetDistance;
 	private int targetTime;
+	
+	
 	@Persistent(defaultFetchGroup="true")
 	@Join
 	private Sport sport;
+	
 	@Persistent(defaultFetchGroup="true")
 	@Join
 	private User creator;
-	@Persistent(defaultFetchGroup="true", mappedBy="challenges", dependentElement = "false")
-	@Join
+	@Persistent
+	@Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
+	public List<User> uAL = new ArrayList<User>();
+	@Persistent
+	@Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
+	public List<User> uCL = new ArrayList<User>();
+	
+	@Persistent
+	@Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
 	public List<TrainingSession> trss = new ArrayList<>(); 
 	
 	public String getName() {

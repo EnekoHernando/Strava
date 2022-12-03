@@ -5,7 +5,10 @@ import java.util.Date;
 import java.util.List;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.Element;
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.Join;
+import javax.jdo.annotations.Order;
 
 @PersistenceCapable(detachable="true")
 public class TrainingSession {
@@ -21,8 +24,10 @@ public class TrainingSession {
 	private Date finishDate;
 	private int duration;
 	
-	@Persistent(defaultFetchGroup = "true", mappedBy="trss", dependentElement = "true")
-	@Join
+	@Persistent(table="ChallengePerTraining")
+    @Join(column="TRAININGSESSION_ID")
+    @Element(column="CHALLENGE_ID")
+    @Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
 	private List<Challenge> challenges = new ArrayList<>();
 
 	public List<Challenge> getChallenges() {

@@ -104,9 +104,11 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	public synchronized UserDTO login(String email, String password, String type) throws RemoteException {
 		System.out.println(" * RemoteFacade login: " + email + " / " + password);
 		User user = LoginRegisterAppService.getInstance().login(email, password, type, args);
+		System.out.println("REMOTE FACADE:::::::::::::::::::: "+ user);
 		if (user != null) {
 			user.setToken(System.currentTimeMillis());
 			this.serverState.put(user.getToken(), user);
+			System.out.println("REMOTE FACADE SERVER STATE:::::::::::::::::::: "+ serverState );
 			return UserAssembler.getInstance().userToDTO(user);
 		}else throw new RemoteException("Login fails!");
 	}

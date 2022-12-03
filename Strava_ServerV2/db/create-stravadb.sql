@@ -1,4 +1,4 @@
-/* DELETE 'productsdb' database*/
+/* DELETE 'stravadb' database*/
 DROP SCHEMA IF EXISTS stravadb;
 /* DELETE USER 'sd' AT LOCAL SERVER*/
 DROP USER IF EXISTS 'sd'@'%';

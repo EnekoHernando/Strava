@@ -19,10 +19,12 @@ public class LoginRegisterAppService{
 	}
 	public User login(String email, String password, String type, String [] args) {
 		User u = UserDAO.getInstance().find(email);
-		if(!type.equals("Normal") || Factory.getInstance().createGateWay(type, args).logIn(email, password)) {
+		System.out.println("LOGIN APP SERVICE RESULT::::::: "+u);
+		if(type.equals("Normal") && u!=null && u.getPassword().equals(org.apache.commons.codec.digest.DigestUtils.sha1Hex(password))) {
+			System.out.println("PASSWORD:::::::  " + u.getPassword());
 			return u;
 		}
-		if(u!=null && u.getPassword().equals(org.apache.commons.codec.digest.DigestUtils.sha1Hex(password))) {
+		if(Factory.getInstance().createGateWay(type, args).logIn(email, password)) {
 			return u;
 		}
 		return null;

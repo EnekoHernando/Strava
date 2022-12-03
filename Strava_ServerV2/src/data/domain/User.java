@@ -4,14 +4,15 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
+import javax.jdo.annotations.Element;
 import javax.jdo.annotations.Join;
+import javax.jdo.annotations.Order;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.Extension;
 
 @PersistenceCapable(detachable = "true")
 public class User {	
-	//Attributes: email, password, birthdate, 
-	//and optionally: weight(kg), height(cm), maxHeartRate and heartRateAtRest(number of beats per minute).
 	private long token=0l;
 	private String email = "";
 	private String password="";
@@ -21,13 +22,18 @@ public class User {
 	private int maxHeartRate=0;
 	private int heartRateAtRest=0;
 	
-	@Persistent(defaultFetchGroup="true", mappedBy="name", dependentElement = "true")
-	@Join
+	@Persistent(table="chalengeAL")
+    @Join(column="USER_ID")
+    @Element(column="CHALLENGE_ID")
+    @Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
 	private List<Challenge> challengeAL = new ArrayList<Challenge>();
 	
-	@Persistent(defaultFetchGroup="true", mappedBy="name", dependentElement = "true")
-	@Join
+	@Persistent(table="chalengeCL")
+    @Join(column="USER_ID")
+    @Element(column="CHALLENGE_ID")
+    @Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
 	private List<Challenge> challengeCL = new ArrayList<Challenge>();
+	
 	@Persistent(defaultFetchGroup="true", mappedBy="owner", dependentElement = "true")
 	@Join
 	private List<TrainingSession> traininSL = new ArrayList<TrainingSession>();
@@ -121,14 +127,15 @@ public class User {
 	public String getPassword() {
 		return password;
 	}
+	
 	@Override
 	public String toString() {
-		StringBuffer result = new StringBuffer();
-		
-		result.append(this.email);
-		return result.toString();
+		return "User [token=" + token + ", email=" + email + ", password=" + password + ", birthdate=" + birthdate
+				+ ", weight=" + weight + ", height=" + height + ", maxHeartRate=" + maxHeartRate + ", heartRateAtRest="
+				+ heartRateAtRest + ", challengeAL=" + challengeAL + ", challengeCL=" + challengeCL + ", traininSL="
+				+ traininSL + "]";
 	}
-	
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this.getClass().getName().equals(obj.getClass().getName())) {

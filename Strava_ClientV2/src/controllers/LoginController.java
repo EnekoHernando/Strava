@@ -42,6 +42,7 @@ public class LoginController {
 	}
 
 	public long getToken() {
+		System.out.println();
 		return user.getToken();
 	}
 	public ServiceLocator getService() {
