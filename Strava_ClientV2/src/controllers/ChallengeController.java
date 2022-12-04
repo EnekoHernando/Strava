@@ -55,7 +55,7 @@ public class ChallengeController {
 		public void createChallenge(String name, Date startDate, Date endDate,
 				float targetDistance, int targetTime, SportDTO sport) {
 			try {
-				this.serviceLocator.getService().createChallenge(this.user, name, startDate, endDate,
+				this.serviceLocator.getService().createChallenge(name, startDate, endDate,
 						targetDistance, targetTime, sport);
 			} catch (Exception e) {
 				System.out.println("# Error creating a challenge: " + e);
@@ -72,7 +72,7 @@ public class ChallengeController {
 			try {
 				this.serviceLocator.getService().acceptChallenge(this.user, challenge);
 			} catch (Exception e) {
-				System.out.println("# Error accept the challenge");
+				System.out.println("# Error accept the challenge "+ e);
 			}
 		}
 		public long getToken() {

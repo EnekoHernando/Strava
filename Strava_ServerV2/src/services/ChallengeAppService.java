@@ -4,7 +4,6 @@ import java.util.Date;
 
 import data.domain.Challenge;
 import data.domain.Sport;
-import data.domain.User;
 import data.dto.ChallengeDTO;
 
 public class ChallengeAppService {
@@ -21,10 +20,9 @@ public class ChallengeAppService {
 			return instance;
 		}
 
-		public Challenge createChallenge(User user, String name, Date startDate, Date endDate, float targetDistance,
+		public Challenge createChallenge(String name, Date startDate, Date endDate, float targetDistance,
 			int targetTime, Sport sport) {
 			Challenge ch = new Challenge();
-			ch.setCreator(user);
 			ch.setName(name);
 			ch.setStartDate(startDate);
 			ch.setEndDate(endDate);

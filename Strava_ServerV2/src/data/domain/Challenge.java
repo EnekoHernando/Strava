@@ -4,11 +4,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 
-import javax.jdo.annotations.Join;
-import javax.jdo.annotations.Order;
-import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
 import javax.jdo.annotations.Extension;
+import javax.jdo.annotations.Join;
+import javax.jdo.annotations.PersistenceCapable;
 
 @PersistenceCapable(detachable = "true")
 public class Challenge {
@@ -20,22 +18,9 @@ public class Challenge {
 	private int targetTime;
 	
 	
-	@Persistent(defaultFetchGroup="true")
-	@Join
+	@Extension(vendorName="datanucleus", key="enum-value-getter", value="getValue")
 	private Sport sport;
-	
-	@Persistent(defaultFetchGroup="true")
 	@Join
-	private User creator;
-	@Persistent
-	@Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
-	public List<User> uAL = new ArrayList<User>();
-	@Persistent
-	@Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
-	public List<User> uCL = new ArrayList<User>();
-	
-	@Persistent
-	@Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
 	public List<TrainingSession> trss = new ArrayList<>(); 
 	
 	public String getName() {
@@ -74,12 +59,6 @@ public class Challenge {
 	public void setSport(Sport sport) {
 		this.sport = sport;
 	}
-	public User getCreator() {
-		return creator;
-	}
-	public void setCreator(User creator) {
-		this.creator = creator;
-	}
 	@Override
 	public String toString() {
 		return "Challenge: "+ this.name + ", Sport" + this.sport;
@@ -87,7 +66,7 @@ public class Challenge {
 	@Override
 	public boolean equals(Object obj) {
 		if (this.getClass().getName().equals(obj.getClass().getName())) {
-			return this.name.equals(((Challenge)obj).name) && this.creator.equals(((Challenge)obj).creator);
+			return this.name.equals(((Challenge)obj).name);
 		}
 		return false;
 	}

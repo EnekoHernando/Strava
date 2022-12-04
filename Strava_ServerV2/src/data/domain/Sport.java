@@ -1,8 +1,19 @@
 package data.domain;
 
-import javax.jdo.annotations.PersistenceCapable;
 
-@PersistenceCapable(detachable = "true")
 public enum Sport {
-	RUNNING, CYCLING
+	
+	RUNNING((short) 1), CYCLING((short) 2);
+	
+	private short value;
+
+    private Sport(short value)
+    {
+        this.value = value;
+    }
+
+    public short getValue()
+    {
+        return value;
+    }
 }

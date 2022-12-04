@@ -19,7 +19,7 @@ public interface IRemoteFacade extends Remote {
 	public List<ChallengeDTO> getCompletedChallenges(UserDTO user) throws RemoteException;
 	public List<ChallengeDTO> getAcceptedChallenges(UserDTO user) throws RemoteException;
 	public List<ChallengeDTO> recoverAllChallenges() throws RemoteException;
-	public void createChallenge(UserDTO user, String name, Date startDate, Date endDate, float targetDistance, int targetTime, SportDTO sport) throws RemoteException;
+	public void createChallenge(String name, Date startDate, Date endDate, float targetDistance, int targetTime, SportDTO sport) throws RemoteException;
 	public void completeChallenge(UserDTO user, int challenge) throws RemoteException;
 	public void acceptChallenge(UserDTO user, int challenge) throws RemoteException;
 	public List<TrainingSessionDTO> getSessions(UserDTO user) throws RemoteException;

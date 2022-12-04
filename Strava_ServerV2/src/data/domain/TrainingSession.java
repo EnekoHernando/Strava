@@ -10,24 +10,19 @@ import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.Order;
 
-@PersistenceCapable(detachable="true")
+@PersistenceCapable
 public class TrainingSession {
-	@Persistent(defaultFetchGroup="true")
-	@Join
+	@Persistent(defaultFetchGroup="true", mappedBy="traininSL", dependentElement = "true")
 	private User owner;
 	private String title;
-	@Persistent(defaultFetchGroup="true")
-	@Join
+	@Extension(vendorName="datanucleus", key="enum-value-getter", value="getValue")
 	private Sport sport;
 	private int distance;
 	private Date startDate;
 	private Date finishDate;
 	private int duration;
 	
-	@Persistent(table="ChallengePerTraining")
-    @Join(column="TRAININGSESSION_ID")
-    @Element(column="CHALLENGE_ID")
-    @Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
+	@Join
 	private List<Challenge> challenges = new ArrayList<>();
 
 	public List<Challenge> getChallenges() {

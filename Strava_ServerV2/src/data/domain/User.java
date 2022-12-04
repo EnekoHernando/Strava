@@ -9,9 +9,10 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.Order;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
+import javax.jdo.annotations.PrimaryKey;
 import javax.jdo.annotations.Extension;
 
-@PersistenceCapable(detachable = "true")
+@PersistenceCapable(detachable="true")
 public class User {	
 	private long token=0l;
 	private String email = "";
@@ -22,19 +23,12 @@ public class User {
 	private int maxHeartRate=0;
 	private int heartRateAtRest=0;
 	
-	@Persistent(table="chalengeAL")
-    @Join(column="USER_ID")
-    @Element(column="CHALLENGE_ID")
-    @Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
+	@Join
 	private List<Challenge> challengeAL = new ArrayList<Challenge>();
 	
-	@Persistent(table="chalengeCL")
-    @Join(column="USER_ID")
-    @Element(column="CHALLENGE_ID")
-    @Order(extensions=@Extension(vendorName="datanucleus", key="list-ordering", value="id ASC"))
+	@Join
 	private List<Challenge> challengeCL = new ArrayList<Challenge>();
 	
-	@Persistent(defaultFetchGroup="true", mappedBy="owner", dependentElement = "true")
 	@Join
 	private List<TrainingSession> traininSL = new ArrayList<TrainingSession>();
 	

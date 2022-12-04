@@ -30,9 +30,9 @@ public class DataAccessObjectBase {
 	public void saveObject(Object object) {
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
-
 		try {
 			tx.begin();
+			System.out.println("   * Storing a User: "+ object);
 			pm.makePersistent(object);
 			tx.commit();
 		} catch (Exception ex) {

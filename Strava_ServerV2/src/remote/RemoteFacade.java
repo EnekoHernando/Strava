@@ -8,6 +8,8 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
+import dao.ChallengeDAO;
+import dao.UserDAO;
 import data.domain.Challenge;
 import data.domain.TrainingSession;
 import data.domain.User;
@@ -28,7 +30,6 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	//Data structure for manage Server State
 	private String[] args;
 	private Map<Long, User> serverState = new HashMap<>(); //Map with the users.
-	private List<Challenge> challenges= new ArrayList<>(); //All challenges created by the community.
 	
 	public RemoteFacade(String[] args) throws RemoteException {
 		this.args = args;
@@ -56,9 +57,10 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public void completeChallenge(UserDTO user, int challenge) throws RemoteException {
-		if(!this.serverState.get(user.getToken()).getChallengeCL().contains(this.serverState.get(user.getToken()).getChallengeAL().get(challenge)))
+		if(!this.serverState.get(user.getToken()).getChallengeCL().contains(this.serverState.get(user.getToken()).getChallengeAL().get(challenge))) {
 			this.serverState.get(user.getToken()).getChallengeCL().add(this.serverState.get(user.getToken()).getChallengeAL().get(challenge));
-		else throw new RemoteException("Challenge alredy Completed!");		
+			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
+		}else throw new RemoteException("Challenge alredy Completed!");		
 	}
 
 	/**
@@ -66,9 +68,10 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public void acceptChallenge(UserDTO user, int challenge) throws RemoteException {
-		if(!this.serverState.get(user.getToken()).getChallengeAL().contains(challenges.get(challenge)))
-			this.serverState.get(user.getToken()).getChallengeAL().add(challenges.get(challenge));
-		else throw new RemoteException("Challenge already Accepted");
+		if(!this.serverState.get(user.getToken()).getChallengeAL().contains(ChallengeDAO.getInstance().getAll().get(challenge))) {
+			this.serverState.get(user.getToken()).getChallengeAL().add(ChallengeDAO.getInstance().getAll().get(challenge));
+			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
+		}else throw new RemoteException("Challenge already Accepted");
 	}
 	@Override
 	
@@ -84,12 +87,12 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 
 	@Override
 	public List<ChallengeDTO> recoverAllChallenges() throws RemoteException {
-		return ChallengeAssembler.getInstance().categoryToDTO(challenges);
+		return ChallengeAssembler.getInstance().categoryToDTO(ChallengeDAO.getInstance().getAll());
 	}
 	@Override
-	public void createChallenge(UserDTO user, String name, Date startDate, Date endDate, float targetDistance,
+	public void createChallenge(String name, Date startDate, Date endDate, float targetDistance,
 			int targetTime, SportDTO sport) throws RemoteException {
-		challenges.add(ChallengeAppService.getInstance().createChallenge(this.serverState.get(user.getToken()), name, startDate, endDate, targetDistance, targetTime,SportAssembler.getInstance().dtoToSport(sport)));
+		ChallengeDAO.getInstance().save(ChallengeAppService.getInstance().createChallenge(name, startDate, endDate, targetDistance, targetTime,SportAssembler.getInstance().dtoToSport(sport)));
 	}
 	
 	@Override
@@ -104,11 +107,9 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	public synchronized UserDTO login(String email, String password, String type) throws RemoteException {
 		System.out.println(" * RemoteFacade login: " + email + " / " + password);
 		User user = LoginRegisterAppService.getInstance().login(email, password, type, args);
-		System.out.println("REMOTE FACADE:::::::::::::::::::: "+ user);
 		if (user != null) {
 			user.setToken(System.currentTimeMillis());
 			this.serverState.put(user.getToken(), user);
-			System.out.println("REMOTE FACADE SERVER STATE:::::::::::::::::::: "+ serverState );
 			return UserAssembler.getInstance().userToDTO(user);
 		}else throw new RemoteException("Login fails!");
 	}

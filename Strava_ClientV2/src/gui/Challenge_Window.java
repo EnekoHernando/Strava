@@ -42,7 +42,7 @@ public class Challenge_Window extends JFrame{
 	private JTable tableC;
 	private DefaultTableModel dataModel;
 	private JTextField nameU;
-	private /*JTextField*/JButton sesion;
+	private JButton sesion;
 	private ChallengeController controller;
 	
 	private JButton createChallenges;
@@ -107,8 +107,9 @@ public class Challenge_Window extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				TrainingSessionController tsc = new TrainingSessionController(controller.getService());
-				tsc.setUser(controller.getUser());			
+				TrainingSessionController tsc = new TrainingSessionController(controller.getService());			
+				tsc.setUser(controller.getUser());
+				TrainingSessionsWindow tsw = new TrainingSessionsWindow(tsc);
 			}
 		});
 		logOut = new JButton("Log out.");
@@ -209,8 +210,12 @@ public class Challenge_Window extends JFrame{
 					createChallenges.setText("Create challenge");
 					creating = false;
 					try {
+						SportDTO spdto = (SportDTO) sportT.getSelectedItem();
+						if(spdto == null) {
+							spdto = SportDTO.RUNNING;
+						}
 						controller.createChallenge(nameT.getText(), sdf2.parse(initialDT.getText()), sdf2.parse(endDT.getText()),
-								Float.parseFloat(targetDT.getText()), Integer.parseInt(targetTT.getText()), (SportDTO) sportT.getSelectedItem());
+								Float.parseFloat(targetDT.getText()), Integer.parseInt(targetTT.getText()), spdto);
 					} catch (Exception e2) {
 					}
 					nameT.setText("");

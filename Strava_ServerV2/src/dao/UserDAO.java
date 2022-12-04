@@ -25,7 +25,24 @@ public class UserDAO extends DataAccessObjectBase implements IDataAccessObject<U
 		super.saveObject(object);
 		
 	}
-
+	public void updateUser(User user) {
+		PersistenceManager pm = pmf.getPersistenceManager();
+	    Transaction tx = pm.currentTransaction();
+	    
+	    try {
+	    	tx.begin();
+	    	pm.makePersistent(user);
+	    	tx.commit();
+	     } catch (Exception ex) {
+		   	System.out.println("   $ Error retreiving an extent: " + ex);
+	     } finally {
+		   	if (tx != null && tx.isActive()) {
+		   		tx.rollback();
+		   	}
+				
+	   		pm.close();
+	     }
+	}
 	@Override
 	public void delete(User object) {
 		super.deleteObject(object);
