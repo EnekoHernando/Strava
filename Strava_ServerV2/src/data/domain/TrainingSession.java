@@ -24,6 +24,19 @@ public class TrainingSession {
 	
 	@Join
 	private List<Challenge> challenges = new ArrayList<>();
+	public TrainingSession() {}
+	
+	public TrainingSession(User owner, String title, Sport sport, int distance, Date startDate, Date finishDate,
+			int duration) {
+		super();
+		this.owner = owner;
+		this.title = title;
+		this.sport = sport;
+		this.distance = distance;
+		this.startDate = startDate;
+		this.finishDate = finishDate;
+		this.duration = duration;
+	}
 
 	public List<Challenge> getChallenges() {
 		return challenges;

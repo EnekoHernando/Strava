@@ -23,6 +23,21 @@ public class User {
 	private int maxHeartRate=0;
 	private int heartRateAtRest=0;
 	
+	public User() {}
+	
+	public User(long token, String email, String password, Date birthdate, float weight, int height, int maxHeartRate,
+			int heartRateAtRest) {
+		super();
+		this.token = token;
+		this.email = email+ "@gmail.com";
+		this.password = password;
+		this.birthdate = birthdate;
+		this.weight = weight;
+		this.height = height;
+		this.maxHeartRate = maxHeartRate;
+		this.heartRateAtRest = heartRateAtRest;
+	}
+
 	@Join
 	private List<Challenge> challengeAL = new ArrayList<Challenge>();
 	

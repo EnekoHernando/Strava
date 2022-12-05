@@ -49,7 +49,10 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int dintance, Date startDate,
 			Date finishdate, int duration) throws RemoteException {
 		TrainingSession ts = TrainingAppSessionService.getInstance().createTrainingSession(this.serverState.get(user.getToken()), title, SportAssembler.getInstance().dtoToSport(sport), dintance, startDate, finishdate, duration);
-		if(this.serverState.get(user.getToken()).getTraininSL().contains(ts)) this.serverState.get(user.getToken()).getTraininSL().add(ts);
+		if(this.serverState.get(user.getToken()).getTraininSL().contains(ts)) {
+			this.serverState.get(user.getToken()).getTraininSL().add(ts);
+			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
+		}
 		else throw new RemoteException("Trainning session already exists");
 	}
 	/**

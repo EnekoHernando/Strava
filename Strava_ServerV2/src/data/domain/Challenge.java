@@ -23,6 +23,18 @@ public class Challenge {
 	@Join
 	public List<TrainingSession> trss = new ArrayList<>(); 
 	
+	public Challenge() {}
+	
+	public Challenge(String name, Date startDate, Date endDate, float targetDistance, int targetTime, Sport sport) {
+		super();
+		this.name = name;
+		this.startDate = startDate;
+		this.endDate = endDate;
+		this.targetDistance = targetDistance;
+		this.targetTime = targetTime;
+		this.sport = sport;
+	}
+
 	public String getName() {
 		return name;
 	}
