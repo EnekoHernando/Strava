@@ -87,7 +87,6 @@ public class UserDAO extends DataAccessObjectBase implements IDataAccessObject<U
 
 		try {
 			tx.begin();
-						
 			Query<?> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE email == '"+param+"'");
 			System.out.println("QUERY:::::::::::D " + query);
 			query.setUnique(true);

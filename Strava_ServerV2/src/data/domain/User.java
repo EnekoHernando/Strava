@@ -25,10 +25,9 @@ public class User {
 	
 	public User() {}
 	
-	public User(long token, String email, String password, Date birthdate, float weight, int height, int maxHeartRate,
+	public User(String email, String password, Date birthdate, float weight, int height, int maxHeartRate,
 			int heartRateAtRest) {
 		super();
-		this.token = token;
 		this.email = email+ "@gmail.com";
 		this.password = password;
 		this.birthdate = birthdate;

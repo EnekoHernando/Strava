@@ -1,5 +1,5 @@
 package data.dto;
 
 public enum SportDTO {
-	RUNNING, CYCLING
+	RUNNING, CYCLING, BULLET_DOGE
 }
