@@ -19,10 +19,8 @@ public class LoginRegisterAppService{
 		return instance;
 	}
 	public User login(String email, String password, String type, String [] args) {
-		User u = UserDAO.getInstance().find(email);
-		System.out.println("LOGIN APP SERVICE RESULT::::::: "+u);
+		User u = UserDAO.getInstance().find(email.toLowerCase());
 		if(type.equals("Normal") && u!=null && u.getPassword().equals(org.apache.commons.codec.digest.DigestUtils.sha1Hex(password))) {
-			System.out.println("PASSWORD:::::::  " + u.getPassword());
 			return u;
 		}
 		if(Factory.getInstance().createGateWay(type, args).logIn(email, password)) {
@@ -36,7 +34,7 @@ public class LoginRegisterAppService{
 		if(type.equals("Normal") || Factory.getInstance().createGateWay(type, args).register(email, password)) {
 			try {
 				if(UserDAO.getInstance().find(email)==null) {
-					user.setEmail(email);
+					user.setEmail(email.toLowerCase());
 					if(type.equals("Normal")) user.setPassword(org.apache.commons.codec.digest.DigestUtils.sha1Hex(password));
 					else user.setPassword("");
 					user.setBirthdate(birth);

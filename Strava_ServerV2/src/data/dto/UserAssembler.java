@@ -24,8 +24,7 @@ public class UserAssembler {
 		dto.setMaxHeartRate(user.getMaxHeartRate());
 		dto.setHeartRateAtRest(user.getHeartRateAtRest());
 		dto.setToken(user.getToken());
-		dto.setChallengeAL(ChallengeAssembler.getInstance().categoryToDTO(user.getChallengeAL()));
-		dto.setChallengeCL(ChallengeAssembler.getInstance().categoryToDTO(user.getChallengeCL()));
+		dto.setChallengeA(ChallengeAssembler.getInstance().mapToDTO(user.getChallengeA()));
 		dto.setTraininSL(TrainingSessionAssembler.getInstance().categoryToDTO(user.getTraininSL()));
 		return dto;
 	}

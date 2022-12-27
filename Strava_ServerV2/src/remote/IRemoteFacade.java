@@ -4,7 +4,9 @@ import java.rmi.Remote;
 import java.rmi.RemoteException;
 import java.util.Date;
 import java.util.List;
+import java.util.Map;
 
+import data.domain.Challenge;
 import data.dto.ChallengeDTO;
 import data.dto.SportDTO;
 import data.dto.TrainingSessionDTO;
@@ -16,8 +18,7 @@ public interface IRemoteFacade extends Remote {
 	public UserDTO login(String type, String email, String password) throws RemoteException;
 	public UserDTO register(String type, String email, String password,Date birth, float weight, int height, int maxHeartRate, int heartRateAtRest) throws RemoteException;
 	public void logout(UserDTO user) throws RemoteException;
-	public List<ChallengeDTO> getCompletedChallenges(UserDTO user) throws RemoteException;
-	public List<ChallengeDTO> getAcceptedChallenges(UserDTO user) throws RemoteException;
+	public Map<ChallengeDTO, Float> getAcceptedChallenges(UserDTO user) throws RemoteException;
 	public List<ChallengeDTO> recoverAllChallenges() throws RemoteException;
 	public void createChallenge(String name, Date startDate, Date endDate, float targetDistance, int targetTime, SportDTO sport) throws RemoteException;
 	public void completeChallenge(UserDTO user, int challenge) throws RemoteException;

@@ -24,6 +24,7 @@ public class TrainingSession {
 	
 	@Join
 	private List<Challenge> challenges = new ArrayList<>();
+	
 	public TrainingSession() {}
 	
 	public TrainingSession(User owner, String title, Sport sport, int distance, Date startDate, Date finishDate,

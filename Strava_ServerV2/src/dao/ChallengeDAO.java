@@ -37,7 +37,6 @@ public class ChallengeDAO extends DataAccessObjectBase implements IDataAccessObj
 		PersistenceManager pm = pmf.getPersistenceManager();
 		Transaction tx = pm.currentTransaction();
 		List<Challenge> challenges = new ArrayList<>();
-		
 		try {
 			tx.begin();
 			Extent<Challenge> extent = pm.getExtent(Challenge.class, true);

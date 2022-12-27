@@ -1,6 +1,7 @@
 package gui;
 
 import java.awt.BorderLayout;
+import java.awt.Dimension;
 import java.awt.GridLayout;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
@@ -66,33 +67,30 @@ public class LogIn_Window extends JFrame{
 	private JPanel i1;
 	private JPanel i2;
 	
-	//▓▓ Logos ▓▓
-	ImageIcon imglogo;
-	ImageIcon imgGoogle;
-	ImageIcon imgFace;
-	
 	public LogIn_Window(LoginController controller) {
 		this.controller = controller;
 		@SuppressWarnings("unused")
 		LogIn_Window instance = this;
-		imglogo = new ImageIcon();
-		imgGoogle = new ImageIcon();
-		imgFace = new ImageIcon();
-		loginB = new JButton("Log in");
-		returnB = new JButton("Return");
 		try {
-			imglogo = new ImageIcon(ImageIO.read(new File("img/Logo_Strava.png")));
-			imgGoogle = new ImageIcon(ImageIO.read(new File("img/Google.png")).getScaledInstance(loginB.getPreferredSize().width, loginB.getPreferredSize().height, BufferedImage.SCALE_SMOOTH));
-			imgFace = new ImageIcon(ImageIO.read(new File("img/Facebook.png")).getScaledInstance(loginB.getPreferredSize().width, loginB.getPreferredSize().height, BufferedImage.SCALE_SMOOTH));
+			logo = new JLabel(new ImageIcon(ImageIO.read(new File("img/Logo_Strava.png"))));
+			loginB = new JButton(new ImageIcon(ImageIO.read(new File("img/log_in.png")).getScaledInstance(75, 75, 0)));
+			loginB.setPreferredSize(new Dimension(75,75));
+			logInG = new JButton(new ImageIcon(ImageIO.read(new File("img/Google.png")).getScaledInstance(loginB.getPreferredSize().width, loginB.getPreferredSize().height, BufferedImage.SCALE_SMOOTH)));
+			logInG.setPreferredSize(new Dimension(75,75));
+			logInF = new JButton(new ImageIcon(ImageIO.read(new File("img/Facebook.png")).getScaledInstance(loginB.getPreferredSize().width, loginB.getPreferredSize().height, BufferedImage.SCALE_SMOOTH)));
+			logInF.setPreferredSize(new Dimension(75,75));
+			signInG = new JButton(new ImageIcon(ImageIO.read(new File("img/Google.png")).getScaledInstance(loginB.getPreferredSize().width, loginB.getPreferredSize().height, BufferedImage.SCALE_SMOOTH)));
+			signInG.setPreferredSize(new Dimension(75,75));
+			signInF = new JButton(new ImageIcon(ImageIO.read(new File("img/Facebook.png")).getScaledInstance(loginB.getPreferredSize().width, loginB.getPreferredSize().height, BufferedImage.SCALE_SMOOTH)));
+			signInF.setPreferredSize(new Dimension(75,75));
+			returnB = new JButton(new ImageIcon(ImageIO.read(new File("img/return.png")).getScaledInstance(75, 75, 0)));
+			returnB.setPreferredSize(new Dimension(75,75));
+			signInB = new JButton(new ImageIcon(ImageIO.read(new File("img/sign_in.png")).getScaledInstance(75, 75, 0)));
+			signInB.setPreferredSize(new Dimension(75,75));
 		} catch (IOException e1) {
 			e1.printStackTrace();
 		}
-		logo = new JLabel(imglogo);
-		logInG = new JButton(imgGoogle);
-		logInF = new JButton(imgFace);
-		signInG = new JButton(imgGoogle);
-		signInF = new JButton(imgFace);
-		signInB = new JButton("Sign in");
+		
 		mailL = new JLabel("Mail: ");
 		mailT = new JTextField("example@gmail.com",50);
 		passwordL = new JLabel("Password: ");
@@ -136,7 +134,7 @@ public class LogIn_Window extends JFrame{
 					getContentPane().add(logo, BorderLayout.NORTH);
 					getContentPane().add(info, BorderLayout.CENTER);
 					getContentPane().add(buttons, BorderLayout.SOUTH);
-					setSize(750, 300);
+					setSize(750, 401);
 				}else {
 					UserDTO user = login("Normal");
 					if(user!=null) {
@@ -292,6 +290,18 @@ public class LogIn_Window extends JFrame{
 					setVisible(true);
 			}
 		});
+		buttons.add(loginB);
+		buttons.add(signInB);
+		getContentPane().add(logo, BorderLayout.CENTER);
+		getContentPane().add(buttons, BorderLayout.SOUTH);
+		setSize(750,400);
+		setVisible(true);
+	}
+	public void initialize() {
+		getContentPane().removeAll();
+		buttons.removeAll();
+		register = false;
+		login = false;
 		buttons.add(loginB);
 		buttons.add(signInB);
 		getContentPane().add(logo, BorderLayout.CENTER);

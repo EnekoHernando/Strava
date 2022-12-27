@@ -9,8 +9,10 @@ import java.awt.event.MouseEvent;
 import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.Map;
 import java.util.Vector;
 
+import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -20,6 +22,7 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
+import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 
 import controllers.ChallengeController;
@@ -35,7 +38,6 @@ public class Challenge_Window extends JFrame{
 	private boolean accepting = true; //If true the user is accepting challenges, if false is completing
 	private JPanel buttons;
 	private JButton logOut;
-	private JButton cChallenge; //Completed challenges
 	private JButton aChallenge; //Accepted challenge
 	private JButton allChallenges; //Community challenges
 	private JRadioButton checkBox;
@@ -43,8 +45,8 @@ public class Challenge_Window extends JFrame{
 	private DefaultTableModel dataModel;
 	private JTextField nameU;
 	private JButton sesion;
+	private JButton userInfo;
 	private ChallengeController controller;
-	
 	private JButton createChallenges;
 
 	//FIELD FOR THE CREATING OF THE CHALLENGE
@@ -64,6 +66,7 @@ public class Challenge_Window extends JFrame{
 	private JPanel create;
 
 	private JPanel panel;
+	
 	
 	public Challenge_Window(ChallengeController cC, LogIn_Window lw) {
 		//FIELD INSTANCES FOR THE CREATING OF THE CHALLENGE
@@ -96,11 +99,15 @@ public class Challenge_Window extends JFrame{
 		create.add(targetTT);
 		create.add(sportL);
 		create.add(sportT);
-		//FIELD INSTANCE FOR THE REST OF THE WINDOW
+		
+		
+		//FIELD INSTANCE FOR THE MAIN WINDOW
 		checkBox = new JRadioButton();
 		this.controller = cC;
 		tableC = new JTable();
-		nameU = new JTextField(this.controller.getUser().getEmail());
+		nameU = new JTextField(this.controller.getUser().getEmail(), 25);
+		nameU.setEditable(false);
+		userInfo = new JButton("User info");
 		buttons = new JPanel();
 		sesion = new JButton("Trainnig sessions");
 		sesion.addActionListener(new ActionListener() {
@@ -118,26 +125,8 @@ public class Challenge_Window extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				logout();
-				lw.setVisible(true);
-				setVisible(false);
-			}
-		});
-		cChallenge = new JButton("Completed Challenges");
-		cChallenge.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				modelTable("completed");
-				tableC.setModel(dataModel);
-				tableC.getColumnModel().getColumn(0).setMinWidth(200);
-				tableC.getColumnModel().getColumn(0).setMaxWidth(200);
-				tableC.getColumnModel().getColumn(1).setMinWidth(100);
-				tableC.getColumnModel().getColumn(1).setMaxWidth(100);
-				tableC.getColumnModel().getColumn(2).setMinWidth(150);
-				tableC.getColumnModel().getColumn(2).setMaxWidth(150);
-				tableC.getColumnModel().getColumn(3).setMinWidth(100);
-				tableC.getColumnModel().getColumn(3).setMaxWidth(100);
-				
+				lw.initialize();
+				dispose();
 			}
 		});
 		aChallenge = new JButton("Accepted Challenges");
@@ -185,11 +174,6 @@ public class Challenge_Window extends JFrame{
 						if (row>=0) {
 							controller.acceptChallenge(row);
 						}
-					}else {
-						int row = tableC.rowAtPoint(e.getPoint());
-						if(row>=0) {
-							controller.completeChallenge(row);
-						}
 					}
 				}
 			}
@@ -236,7 +220,6 @@ public class Challenge_Window extends JFrame{
 					getContentPane().removeAll();
 					allChallenges.setEnabled(true);
 					aChallenge.setEnabled(true);
-					cChallenge.setEnabled(true);
 					nameU.setText(controller.getUser().getEmail());
 					panel.removeAll();
 					panel.add(nameU);
@@ -256,19 +239,18 @@ public class Challenge_Window extends JFrame{
 		tableC.getColumnModel().getColumn(1).setMaxWidth(100);
 		tableC.getColumnModel().getColumn(2).setMinWidth(150);
 		tableC.getColumnModel().getColumn(2).setMaxWidth(150);
-		tableC.getColumnModel().getColumn(3).setMinWidth(100);
-		tableC.getColumnModel().getColumn(3).setMaxWidth(100);
+		tableC.getColumnModel().getColumn(3).setMinWidth(150);
+		tableC.getColumnModel().getColumn(3).setMaxWidth(150);
 		buttons.add(logOut);
 		buttons.add(allChallenges);
 		buttons.add(aChallenge);
-		buttons.add(cChallenge);
 		buttons.add(createChallenges);
-		panel.setLayout(new GridLayout(1,2));
 		nameU.setText(this.controller.getUser().getEmail());
 		panel.add(nameU);
+		panel.add(userInfo);
 		panel.add(sesion);
 		getContentPane().add(panel, BorderLayout.NORTH);
-		getContentPane().add( new JScrollPane(tableC), BorderLayout.CENTER );
+		getContentPane().add(new JScrollPane(tableC), BorderLayout.CENTER);
 		getContentPane().add(buttons, BorderLayout.SOUTH);
 		setVisible(true);
 		setSize(800,800);
@@ -282,17 +264,6 @@ public class Challenge_Window extends JFrame{
 	public void modelTable(String type) {
 		Vector<String> headers=null;
 		switch (type) {
-		case "completed":
-			headers = new Vector<String>( Arrays.asList( "Name", "sport", "Start Date-End Date", "Distance-Time") );
-			dataModel = new DefaultTableModel(  
-				new Vector<Vector<Object>>(),  
-				headers  
-			);
-			for (ChallengeDTO c : controller.getCompletedChallenges(controller.getUser())) {
-				dataModel.addRow( new Object[] {c.getName(), c.getSport().name(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getEndDate()), c.getTargetDistance() + " km - "+c.getTargetTime()+" min"} );
-			}
-			tableC.setModel(dataModel);
-			break;
 		case "all":
 			headers = new Vector<String>( Arrays.asList( "Name", "sport", "Start Date-End Date", "Distance-Time", "Accepted"));
 			dataModel = new DefaultTableModel(  
@@ -301,7 +272,7 @@ public class Challenge_Window extends JFrame{
 			);
 			for (ChallengeDTO c : controller.recoverAllChallenges()) {
 				checkBox.setSelected(false);
-				for(ChallengeDTO cdto:controller.getAcceptedChallenges(controller.getUser())) {
+				for(ChallengeDTO cdto:controller.getAcceptedChallenges(controller.getUser()).keySet()) {
 					if(c.equals(cdto)) {
 						checkBox.setSelected(true);
 						break;
@@ -311,21 +282,17 @@ public class Challenge_Window extends JFrame{
 			}
 			tableC.setModel(dataModel);
 			break;
+			
 		default:
-			headers = new Vector<String>( Arrays.asList( "Name", "sport", "Start Date-End Date", "Distance-Time", "Completed") );
+			headers = new Vector<String>( Arrays.asList( "Name", "sport", "Start Date-End Date", "Distance-Time", "Progress") );
 			dataModel = new DefaultTableModel(  
 				new Vector<Vector<Object>>(),  
 				headers  
 			);
-			for (ChallengeDTO c : controller.getAcceptedChallenges(controller.getUser())) {
-				checkBox.setSelected(false);
-				for(ChallengeDTO cdto:controller.getCompletedChallenges(controller.getUser())) {
-					if(c.equals(cdto)) {
-						checkBox.setSelected(true);
-						break;
-					}
-				}
-				dataModel.addRow( new Object[] {c.getName(), c.getSport().name(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getEndDate()), c.getTargetDistance() + " km - "+c.getTargetTime()+" min", checkBox.isSelected()} );
+			Map<ChallengeDTO, Float> map = controller.getAcceptedChallenges(controller.getUser());
+			for (ChallengeDTO c : map.keySet()) {
+				float progress = (map.get(c)/c.getTargetDistance()) *100; 
+				dataModel.addRow( new Object[] {c.getName(), c.getSport().name(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getEndDate()), c.getTargetDistance() + " km - "+c.getTargetTime()+" min", progress+"%"} );
 			}
 			tableC.setModel(dataModel);
 			break;

@@ -2,7 +2,6 @@ package remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -10,7 +9,6 @@ import java.util.Map;
 
 import dao.ChallengeDAO;
 import dao.UserDAO;
-import data.domain.Challenge;
 import data.domain.TrainingSession;
 import data.domain.User;
 import data.dto.ChallengeAssembler;
@@ -60,10 +58,10 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public void completeChallenge(UserDTO user, int challenge) throws RemoteException {
-		if(!this.serverState.get(user.getToken()).getChallengeCL().contains(this.serverState.get(user.getToken()).getChallengeAL().get(challenge))) {
+		/*if(!this.serverState.get(user.getToken()).getChallengeCL().contains(this.serverState.get(user.getToken()).getChallengeAL().get(challenge))) {
 			this.serverState.get(user.getToken()).getChallengeCL().add(this.serverState.get(user.getToken()).getChallengeAL().get(challenge));
 			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
-		}else throw new RemoteException("Challenge alredy Completed!");		
+		}else throw new RemoteException("Challenge alredy Completed!");*/		
 	}
 
 	/**
@@ -71,21 +69,20 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public void acceptChallenge(UserDTO user, int challenge) throws RemoteException {
-		if(!this.serverState.get(user.getToken()).getChallengeAL().contains(ChallengeDAO.getInstance().getAll().get(challenge))) {
+		if(!this.serverState.get(user.getToken()).getChallengeA().containsKey(ChallengeDAO.getInstance().getAll().get(challenge))) {
+			this.serverState.get(user.getToken()).getChallengeA().put(ChallengeDAO.getInstance().getAll().get(challenge), 0f);
+			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
+		}
+		/*if(!this.serverState.get(user.getToken()).getChallengeAL().contains(ChallengeDAO.getInstance().getAll().get(challenge))) {
 			this.serverState.get(user.getToken()).getChallengeAL().add(ChallengeDAO.getInstance().getAll().get(challenge));
 			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
-		}else throw new RemoteException("Challenge already Accepted");
-	}
-	@Override
-	
-	public List<ChallengeDTO> getCompletedChallenges(UserDTO user) throws RemoteException {
-		return ChallengeAssembler.getInstance().categoryToDTO(this.serverState.get(user.getToken()).getChallengeCL());
-		
+		}*/else throw new RemoteException("Challenge already Accepted");
 	}
 
 	@Override
-	public List<ChallengeDTO> getAcceptedChallenges(UserDTO user) throws RemoteException {
-		return ChallengeAssembler.getInstance().categoryToDTO(this.serverState.get(user.getToken()).getChallengeAL());
+	public Map<ChallengeDTO, Float> getAcceptedChallenges(UserDTO user) throws RemoteException {
+		/*return ChallengeAssembler.getInstance().categoryToDTO(this.serverState.get(user.getToken()).getChallengeAL());*/
+		return ChallengeAssembler.getInstance().mapToDTO(this.serverState.get(user.getToken()).getChallengeA());
 	}
 
 	@Override
@@ -110,6 +107,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	public synchronized UserDTO login(String email, String password, String type) throws RemoteException {
 		System.out.println(" * RemoteFacade login: " + email + " / " + password);
 		User user = LoginRegisterAppService.getInstance().login(email, password, type, args);
+		System.out.println(" * RemoteFacade Result: " + user);
 		if (user != null) {
 			user.setToken(System.currentTimeMillis());
 			this.serverState.put(user.getToken(), user);

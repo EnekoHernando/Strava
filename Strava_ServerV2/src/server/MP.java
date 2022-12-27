@@ -43,15 +43,14 @@ public class MP {
 		ChallengeDAO.getInstance().save(c2);
 		ChallengeDAO.getInstance().save(c3);
 		User u1 = new User("eneko",org.apache.commons.codec.digest.DigestUtils.sha1Hex("1234"), new Date(System.currentTimeMillis()), 100, 175,120,60);
-		u1.getChallengeAL().add(c1);
+		u1.getChallengeA().put(c1,150f);
 		TrainingSession ts1 = new TrainingSession(u1, "Run until u can't breath", Sport.RUNNING, 10, 
 				new Date(System.currentTimeMillis()), new Date(System.currentTimeMillis()+86400L), 10);
 		ts1.getChallenges().add(c1);
 		u1.getTraininSL().add(ts1);
 		UserDAO.getInstance().save(u1);
-		User u2 = new User("Winston.Churchill", org.apache.commons.codec.digest.DigestUtils.sha1Hex("GodSaveTheQueen1960"), sdf2.parse("30/11/1974"), 130, 165, 150, 70);
-		u2.getChallengeAL().add(c2);
-		u2.getChallengeCL().add(c3);
+		User u2 = new User("winston.churchill", org.apache.commons.codec.digest.DigestUtils.sha1Hex("GodSaveTheQueen1960"), sdf2.parse("30/11/1974"), 130, 165, 150, 70);
+		u2.getChallengeA().put(c2,20f);
 		TrainingSession ts2 = new TrainingSession(u2, "Win WW3", Sport.BULLET_DOGE, 2000, sdf2.parse("1/9/2022"), sdf2.parse("2/9/2022"), 2190);
 		ts2.getChallenges().add(c2);
 		u2.getTraininSL().add(ts2);

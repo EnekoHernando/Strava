@@ -25,9 +25,9 @@ public class TrainingSessionAssembler {
 		dto.setChallenges(ChallengeAssembler.getInstance().categoryToDTO(ts.getChallenges()));
 		return dto;
 	}
-	public List<TrainingSessionDTO> categoryToDTO(List<TrainingSession> challenges){
+	public List<TrainingSessionDTO> categoryToDTO(List<TrainingSession> ts){
 		List<TrainingSessionDTO> dtos = new ArrayList<>();
-		for(TrainingSession c: challenges) {
+		for(TrainingSession c: ts) {
 			dtos.add(this.trainingSessionToDTO(c));
 		}
 		return dtos;

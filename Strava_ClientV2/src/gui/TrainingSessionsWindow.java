@@ -14,6 +14,7 @@ import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JPanel;
+import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
@@ -143,9 +144,9 @@ public class TrainingSessionsWindow extends JFrame{
 		name = new JLabel(tsc.getUser().getEmail());
 		buttons.add(createT);
 		getContentPane().add(name,BorderLayout.NORTH);
-		getContentPane().add(dataT, BorderLayout.CENTER);
+		getContentPane().add(new JScrollPane(dataT), BorderLayout.CENTER);
 		getContentPane().add(buttons, BorderLayout.SOUTH);
 		setVisible(true);
-		setSize(500,500);
+		setSize(800,800);
 	}
 }

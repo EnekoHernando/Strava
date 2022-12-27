@@ -3,7 +3,9 @@ package data.dto;
 import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 //This class implements DTO pattern
 public class UserDTO implements Serializable {	
@@ -16,11 +18,12 @@ public class UserDTO implements Serializable {
 	private int maxHeartRate;
 	private int heartRateAtRest;
 	private long token;
-	private List<ChallengeDTO> challengeAL = new ArrayList<ChallengeDTO>();
-	private List<ChallengeDTO> challengeCL = new ArrayList<ChallengeDTO>();
+	/*private List<ChallengeDTO> challengeAL = new ArrayList<ChallengeDTO>();
+	private List<ChallengeDTO> challengeCL = new ArrayList<ChallengeDTO>();*/
+	private Map<ChallengeDTO, Float> challengeA = new HashMap<ChallengeDTO, Float>();
 	private List<TrainingSessionDTO> traininSL = new ArrayList<TrainingSessionDTO>();
 	
-	public List<ChallengeDTO> getChallengeAL() {
+	/*public List<ChallengeDTO> getChallengeAL() {
 		return challengeAL;
 	}
 
@@ -34,10 +37,18 @@ public class UserDTO implements Serializable {
 
 	public void setChallengeCL(List<ChallengeDTO> challengeCL) {
 		this.challengeCL = challengeCL;
-	}
+	}*/
 
 	public List<TrainingSessionDTO> getTraininSL() {
 		return traininSL;
+	}
+
+	public Map<ChallengeDTO, Float> getChallengeA() {
+		return challengeA;
+	}
+
+	public void setChallengeA(Map<ChallengeDTO, Float> challengeA) {
+		this.challengeA = challengeA;
 	}
 
 	public void setTraininSL(List<TrainingSessionDTO> traininSL) {
@@ -98,12 +109,12 @@ public class UserDTO implements Serializable {
 	public void setHeartRateAtRest(int heartRateAtRest) {
 		this.heartRateAtRest = heartRateAtRest;
 	}
-	
+
 	@Override
 	public String toString() {
-		StringBuffer result = new StringBuffer();
-		
-		result.append(this.email);
-		return result.toString();
+		return "UserDTO [email=" + email + ", birthdate=" + birthdate + ", weight=" + weight + ", height=" + height
+				+ ", maxHeartRate=" + maxHeartRate + ", heartRateAtRest=" + heartRateAtRest + ", token=" + token
+				+ ", challengeA=" + challengeA + ", traininSL=" + traininSL + "]";
 	}
+	
 }

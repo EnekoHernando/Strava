@@ -4,7 +4,9 @@ import java.rmi.RemoteException;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import data.dto.ChallengeDTO;
 import data.dto.SportDTO;
@@ -28,21 +30,13 @@ public class ChallengeController {
 				System.out.println("# Error during logout: " + e);
 			}
 		}
-		public List<ChallengeDTO> getCompletedChallenges(UserDTO user){
-			try {
-				return this.serviceLocator.getService().getCompletedChallenges(this.user);
-			} catch (RemoteException e) {
-				System.out.println("# Error recovering completed challenges: " + e);
-			}
-			return new ArrayList<>(Arrays.asList(new ChallengeDTO()));
-		}
-		public List<ChallengeDTO> getAcceptedChallenges(UserDTO user){
+		public Map<ChallengeDTO, Float> getAcceptedChallenges(UserDTO user){
 			try {
 				return this.serviceLocator.getService().getAcceptedChallenges(this.user);
 			} catch (Exception e) {
 				System.out.println("# Error recovering accepted challenges: " + e);
 			}
-			return new ArrayList<>(Arrays.asList(new ChallengeDTO()));
+			return new HashMap<ChallengeDTO, Float>();
 		}
 		public List<ChallengeDTO> recoverAllChallenges(){
 			try {
@@ -60,13 +54,6 @@ public class ChallengeController {
 			} catch (Exception e) {
 				System.out.println("# Error creating a challenge: " + e);
 			}			
-		}
-		public void completeChallenge(int challenge) {
-			try {
-				this.serviceLocator.getService().completeChallenge(this.user, challenge);
-			} catch (Exception e) {
-				System.out.println("# Error Completing the challenge");
-			}
 		}
 		public void acceptChallenge(int challenge) {
 			try {

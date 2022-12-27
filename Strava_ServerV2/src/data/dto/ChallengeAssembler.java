@@ -1,7 +1,9 @@
 package data.dto;
 
 import java.util.ArrayList;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
 import data.domain.Challenge;
 
@@ -33,5 +35,12 @@ public class ChallengeAssembler {
 			dtos.add(this.challengeToDTO(c));
 		}
 		return dtos;
+	}
+	public Map<ChallengeDTO, Float> mapToDTO(Map<Challenge, Float> challengesA){
+		Map<ChallengeDTO, Float> map = new HashMap<>();
+		for(Challenge c: challengesA.keySet()) {
+			map.put(this.challengeToDTO(c), challengesA.get(c));
+		}
+		return map;
 	}
 }

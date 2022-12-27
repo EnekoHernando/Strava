@@ -61,7 +61,7 @@ public class TrainingSessionDTO implements Serializable{
 	@Override
 	public String toString() {
 		// TODO Auto-generated method stub
-		return "Title: "+this.title+" Start Date: "+this.startDate+" FinishDate: " + this.finishDate;
+		return "Title: "+this.title+" Start Date: "+this.startDate+" FinishDate: " + this.finishDate + ", Challenges" + this.challenges;
 	}
 	
 }

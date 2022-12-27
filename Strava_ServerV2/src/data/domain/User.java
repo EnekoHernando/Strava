@@ -2,15 +2,12 @@ package data.domain;
 
 import java.util.ArrayList;
 import java.util.Date;
+import java.util.HashMap;
 import java.util.List;
+import java.util.Map;
 
-import javax.jdo.annotations.Element;
 import javax.jdo.annotations.Join;
-import javax.jdo.annotations.Order;
 import javax.jdo.annotations.PersistenceCapable;
-import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.PrimaryKey;
-import javax.jdo.annotations.Extension;
 
 @PersistenceCapable(detachable="true")
 public class User {	
@@ -37,16 +34,31 @@ public class User {
 		this.heartRateAtRest = heartRateAtRest;
 	}
 
-	@Join
+	/*@Join
 	private List<Challenge> challengeAL = new ArrayList<Challenge>();
 	
 	@Join
 	private List<Challenge> challengeCL = new ArrayList<Challenge>();
+	*/
+	/**
+	 * The map registers the challenge accepted and the completition of those, 
+	 * AKA, how much of the objective is done (in km).
+	 */
+	@Join
+	private HashMap<Challenge, Float> challengeA = new HashMap<Challenge, Float>();
 	
 	@Join
 	private List<TrainingSession> traininSL = new ArrayList<TrainingSession>();
+		
+
+	public Map<Challenge, Float> getChallengeA() {
+		return challengeA;
+	}
+	public void setChallengeA(HashMap<Challenge, Float> challengeA) {
+		this.challengeA = challengeA;
+	}
 	
-	public List<Challenge> getChallengeAL() {
+	/*public List<Challenge> getChallengeAL() {
 		return challengeAL;
 	}
 
@@ -60,7 +72,7 @@ public class User {
 
 	public void setChallengeCL(List<Challenge> challengeCL) {
 		this.challengeCL = challengeCL;
-	}
+	}*/
 
 	public List<TrainingSession> getTraininSL() {
 		return traininSL;
@@ -140,8 +152,7 @@ public class User {
 	public String toString() {
 		return "User [token=" + token + ", email=" + email + ", password=" + password + ", birthdate=" + birthdate
 				+ ", weight=" + weight + ", height=" + height + ", maxHeartRate=" + maxHeartRate + ", heartRateAtRest="
-				+ heartRateAtRest + ", challengeAL=" + challengeAL + ", challengeCL=" + challengeCL + ", traininSL="
-				+ traininSL + "]";
+				+ heartRateAtRest+ ", MAP:" + challengeA+ ", "+ traininSL;
 	}
 
 	@Override
@@ -149,7 +160,6 @@ public class User {
 		if (this.getClass().getName().equals(obj.getClass().getName())) {
 			return this.email.equals(((User)obj).email) && this.password.equals(((User)obj).password);
 		}
-		
 		return false;
 	}
 
