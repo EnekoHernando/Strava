@@ -19,8 +19,8 @@ public class SportAssembler {
 			return SportDTO.RUNNING;
 		case "CYCLING":
 			return SportDTO.CYCLING;
-		case "BULLET_DOGE":
-			return SportDTO.BULLET_DOGE;
+		case "RUNNING_CYCLING":
+			return SportDTO.RUNNING_CYCLING;
 		default:
 			return null;
 		}
@@ -31,8 +31,8 @@ public class SportAssembler {
 			return Sport.RUNNING;
 		case "CYCLING":
 			return Sport.CYCLING;
-		case "BULLET_DOGE":
-			return Sport.BULLET_DOGE;
+		case "RUNNING_CYCLING":
+			return Sport.RUNNING_CYCLING;
 		default:
 			return null;
 		}

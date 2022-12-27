@@ -84,6 +84,7 @@ public class Challenge_Window extends JFrame{
 		sportT = new JComboBox<>();
 		sportT.addItem(SportDTO.RUNNING);
 		sportT.addItem(SportDTO.CYCLING);
+		sportT.addItem(SportDTO.RUNNING_CYCLING);
 		create = new JPanel();
 		panel = new JPanel();
 		create.setLayout(new GridLayout(6,0));

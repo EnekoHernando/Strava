@@ -109,6 +109,7 @@ public class LogIn_Window extends JFrame{
 		info = new JPanel();
 		i1 =new JPanel();
 		i2 = new JPanel();
+		
 		//LISTENERS
 		loginB.addActionListener(new ActionListener() {
 			
