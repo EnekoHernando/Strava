@@ -46,10 +46,10 @@ public class ChallengeController {
 			}
 			return new ArrayList<>(Arrays.asList(new ChallengeDTO()));
 		}
-		public void createChallenge(String name, Date startDate, Date endDate,
+		public void createChallenge(UserDTO user, String name, Date startDate, Date endDate,
 				float targetDistance, int targetTime, SportDTO sport) {
 			try {
-				this.serviceLocator.getService().createChallenge(name, startDate, endDate,
+				this.serviceLocator.getService().createChallenge(user, name, startDate, endDate,
 						targetDistance, targetTime, sport);
 			} catch (Exception e) {
 				System.out.println("# Error creating a challenge: " + e);

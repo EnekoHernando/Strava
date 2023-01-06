@@ -225,7 +225,7 @@ public class Challenge_Window extends JFrame{
 						if(spdto == null) {
 							spdto = SportDTO.RUNNING;
 						}
-						controller.createChallenge(nameT.getText(), sdf2.parse(initialDT.getText()), sdf2.parse(endDT.getText()),
+						controller.createChallenge(controller.getUser(), nameT.getText(), sdf2.parse(initialDT.getText()), sdf2.parse(endDT.getText()),
 								Float.parseFloat(targetDT.getText()), Integer.parseInt(targetTT.getText()), spdto);
 					} catch (Exception e2) {
 					}

@@ -11813,3 +11813,205 @@ java.sql.SQLException: Cannot drop table 'user' referenced by a foreign key cons
 19:12:06,311 (RMI TCP Connection(4)-192.168.1.111) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
 19:12:36,898 (RMI TCP Connection(4)-192.168.1.111) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
 19:12:37,780 (RMI TCP Connection(4)-192.168.1.111) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+23:43:03,291 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+23:43:03,396 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+23:43:03,404 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+23:43:03,411 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+23:43:03,411 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 3 clases.
+23:43:04,091 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Eliminación del esquema para clases
+23:43:04,092 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23:43:04,092 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+23:43:04,092 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+23:43:04,092 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+23:43:04,092 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+23:43:04,092 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+23:43:04,092 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+23:43:04,093 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+23:43:04,093 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+23:43:04,093 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+23:43:04,093 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+23:43:04,093 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+23:43:04,093 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+23:43:04,093 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+23:43:04,905 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender$SMTPAuthenticator.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+23:43:04,906 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+23:43:05,317 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23:43:05,943 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23:43:05,943 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23:43:05,943 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+23:43:05,943 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+23:43:05,944 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+23:43:06,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender$SMTPAuthenticator.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+23:43:06,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+23:43:06,810 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:43:06,810 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:43:06,847 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:43:06,873 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:43:07,405 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23:43:09,218 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+23:43:09,234 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+23:48:36,148 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+23:48:36,249 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+23:48:36,258 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+23:48:36,268 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+23:48:36,268 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 3 clases.
+23:48:36,915 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Eliminación del esquema para clases
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+23:48:36,916 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+23:48:36,917 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+23:48:37,626 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender$SMTPAuthenticator.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender.class
+23:48:37,627 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+23:48:37,628 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+23:48:37,628 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+23:48:37,628 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+23:48:37,628 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+23:48:37,628 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+23:48:38,042 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23:48:38,653 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+23:48:38,653 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+23:48:38,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+23:48:38,653 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+23:48:38,654 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+23:48:39,377 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender$SMTPAuthenticator.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\MailSender.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+23:48:39,378 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+23:48:39,530 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:48:39,530 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:48:39,563 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:48:39,589 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+23:48:40,180 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+23:48:42,026 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+23:48:42,038 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient

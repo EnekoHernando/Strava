@@ -21,13 +21,13 @@ import data.dto.TrainingSessionAssembler;
 import data.dto.TrainingSessionDTO;
 import data.dto.UserAssembler;
 import data.dto.UserDTO;
+import gateways.MailSender;
 import services.ChallengeAppService;
 import services.LoginRegisterAppService;
 import services.TrainingAppSessionService;
 
 public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {	
 	private static final long serialVersionUID = 1L;
-	//Data structure for manage Server State
 	private String[] args;
 	private Map<Long, User> serverState = new HashMap<>(); //Map with the users.
 	
@@ -69,17 +69,6 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 		else throw new RemoteException("Trainning session already exists");
 	}
 	/**
-	 *Makes accepted Challenges completed
-	 */
-	@Override
-	public void completeChallenge(UserDTO user, int challenge) throws RemoteException {
-		/*if(!this.serverState.get(user.getToken()).getChallengeCL().contains(this.serverState.get(user.getToken()).getChallengeAL().get(challenge))) {
-			this.serverState.get(user.getToken()).getChallengeCL().add(this.serverState.get(user.getToken()).getChallengeAL().get(challenge));
-			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
-		}else throw new RemoteException("Challenge alredy Completed!");*/		
-	}
-
-	/**
 	 * Takes community Challenge and accept them
 	 */
 	@Override
@@ -92,7 +81,6 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 
 	@Override
 	public Map<ChallengeDTO, Float> getAcceptedChallenges(UserDTO user) throws RemoteException {
-		/*return ChallengeAssembler.getInstance().categoryToDTO(this.serverState.get(user.getToken()).getChallengeAL());*/
 		return ChallengeAssembler.getInstance().mapToDTO(this.serverState.get(user.getToken()).getChallengeA());
 	}
 
@@ -100,10 +88,13 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	public List<ChallengeDTO> recoverAllChallenges() throws RemoteException {
 		return ChallengeAssembler.getInstance().categoryToDTO(ChallengeDAO.getInstance().getAll());
 	}
+	
 	@Override
-	public void createChallenge(String name, Date startDate, Date endDate, float targetDistance,
-			int targetTime, SportDTO sport) throws RemoteException {
-		ChallengeDAO.getInstance().save(ChallengeAppService.getInstance().createChallenge(name, startDate, endDate, targetDistance, targetTime,SportAssembler.getInstance().dtoToSport(sport)));
+	public void createChallenge(UserDTO user, String name, Date startDate, Date endDate, float targetDistance, int targetTime, SportDTO sport) throws RemoteException {
+		Challenge created = ChallengeAppService.getInstance().createChallenge(name, startDate, endDate, targetDistance, targetTime,SportAssembler.getInstance().dtoToSport(sport));
+		ChallengeDAO.getInstance().save(created);
+		new MailSender(args[0], name).sendMessage(created.toString());
+		System.out.println("Mail with the challenge information sended to: " + user.getEmail());
 	}
 	
 	@Override

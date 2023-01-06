@@ -19,26 +19,8 @@ public class UserDTO implements Serializable {
 	private int maxHeartRate;
 	private int heartRateAtRest;
 	private long token;
-	/*private List<ChallengeDTO> challengeAL = new ArrayList<ChallengeDTO>();
-	private List<ChallengeDTO> challengeCL = new ArrayList<ChallengeDTO>();*/
 	private Map<ChallengeDTO, Float> challengeA = new LinkedHashMap<ChallengeDTO, Float>();
 	private List<TrainingSessionDTO> traininSL = new ArrayList<TrainingSessionDTO>();
-	
-	/*public List<ChallengeDTO> getChallengeAL() {
-		return challengeAL;
-	}
-
-	public void setChallengeAL(List<ChallengeDTO> challengeAL) {
-		this.challengeAL = challengeAL;
-	}
-
-	public List<ChallengeDTO> getChallengeCL() {
-		return challengeCL;
-	}
-
-	public void setChallengeCL(List<ChallengeDTO> challengeCL) {
-		this.challengeCL = challengeCL;
-	}*/
 
 	public List<TrainingSessionDTO> getTraininSL() {
 		return traininSL;
