@@ -12,7 +12,6 @@ import java.util.Date;
 import java.util.Map;
 import java.util.Vector;
 
-import javax.swing.BorderFactory;
 import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
@@ -22,7 +21,6 @@ import javax.swing.JRadioButton;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.JTextField;
-import javax.swing.border.Border;
 import javax.swing.table.DefaultTableModel;
 
 import controllers.ChallengeController;
@@ -48,6 +46,7 @@ public class Challenge_Window extends JFrame{
 	private JButton userInfo;
 	private ChallengeController controller;
 	private JButton createChallenges;
+	private Challenge_Window cw;
 
 	//FIELD FOR THE CREATING OF THE CHALLENGE
 	boolean creating = false;
@@ -64,11 +63,14 @@ public class Challenge_Window extends JFrame{
 	private JLabel sportL;
 	private JComboBox<SportDTO> sportT;
 	private JPanel create;
-
 	private JPanel panel;
+	
+	//FIELDS TO ALTER THE ACCEPTED CHALLENGES
+	private JTextField kmsDone;
 	
 	
 	public Challenge_Window(ChallengeController cC, LogIn_Window lw) {
+		cw = this;
 		//FIELD INSTANCES FOR THE CREATING OF THE CHALLENGE
 		nameL=new JLabel("Name: ");
 		nameT = new JTextField("",150);
@@ -87,6 +89,7 @@ public class Challenge_Window extends JFrame{
 		sportT.addItem(SportDTO.RUNNING_CYCLING);
 		create = new JPanel();
 		panel = new JPanel();
+		kmsDone = new JTextField("0",10);
 		create.setLayout(new GridLayout(6,0));
 		create.add(nameL);
 		create.add(nameT);
@@ -117,7 +120,8 @@ public class Challenge_Window extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				TrainingSessionController tsc = new TrainingSessionController(controller.getService());			
 				tsc.setUser(controller.getUser());
-				TrainingSessionsWindow tsw = new TrainingSessionsWindow(tsc);
+				new TrainingSessionsWindow(tsc, cw);
+				setVisible(false);
 			}
 		});
 		logOut = new JButton("Log out.");
@@ -146,6 +150,14 @@ public class Challenge_Window extends JFrame{
 				tableC.getColumnModel().getColumn(2).setMaxWidth(150);
 				tableC.getColumnModel().getColumn(3).setMinWidth(100);
 				tableC.getColumnModel().getColumn(3).setMaxWidth(100);
+				buttons.removeAll();
+				buttons.add(logOut);
+				buttons.add(allChallenges);
+				buttons.add(aChallenge);
+				buttons.add(createChallenges);
+				buttons.add(kmsDone);
+				validate();
+				repaint();
 			}
 		});
 		allChallenges= new JButton("Community Challenges");
@@ -176,7 +188,21 @@ public class Challenge_Window extends JFrame{
 							controller.acceptChallenge(row);
 						}
 					}
+				}else if(!accepting) {
+					kmsDone.setText(controller.getMapChallenge(tableC.getSelectedRow()));
 				}
+			}
+		});
+		kmsDone.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				try {
+					controller.modifyMapChallenge(tableC.getSelectedRow(), Float.parseFloat(kmsDone.getText()));
+				}catch (Exception e1) {
+					System.out.println("# Could not update the progress.");
+				}
+				modelTable("Accepted");
 			}
 		});
 		createChallenges = new JButton("Create challenge");
@@ -219,12 +245,7 @@ public class Challenge_Window extends JFrame{
 					tableC.getColumnModel().getColumn(3).setMinWidth(100);
 					tableC.getColumnModel().getColumn(3).setMaxWidth(100);
 					getContentPane().removeAll();
-					allChallenges.setEnabled(true);
-					aChallenge.setEnabled(true);
 					nameU.setText(controller.getUser().getEmail());
-					panel.removeAll();
-					panel.add(nameU);
-					panel.add(sesion);
 					getContentPane().add(panel, BorderLayout.NORTH);
 					getContentPane().add( new JScrollPane(tableC), BorderLayout.CENTER );
 					getContentPane().add(buttons, BorderLayout.SOUTH);

@@ -19,7 +19,6 @@ public class ChallengeAppService {
 			
 			return instance;
 		}
-
 		public Challenge createChallenge(String name, Date startDate, Date endDate, float targetDistance,
 			int targetTime, Sport sport) {
 			Challenge ch = new Challenge();

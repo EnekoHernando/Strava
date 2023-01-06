@@ -32,6 +32,7 @@ public class TrainingSessionsWindow extends JFrame{
 	private JLabel name;
 	private Vector<String> headers=null;
 	private JButton createT;
+	private JButton back;
 	private JPanel buttons;
 	
 	//▓▓▓  CREATION OF THE SESSION  ▓▓▓
@@ -50,11 +51,12 @@ public class TrainingSessionsWindow extends JFrame{
 	private JPanel creation;
 	
 	
-	public TrainingSessionsWindow(TrainingSessionController tsc) {
+	public TrainingSessionsWindow(TrainingSessionController tsc, Challenge_Window cw) {
 		
 		this.controller = tsc;
 		dataT=new JTable();
 		createT = new JButton("Create Session");
+		back = new JButton("Return");
 		buttons = new JPanel();
 		nameSL = new JLabel("Name of the session: ");
 		nameST = new JTextField();
@@ -87,7 +89,14 @@ public class TrainingSessionsWindow extends JFrame{
 			new Vector<Vector<Object>>(),  
 			headers  
 		);
-		
+		back.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				cw.setVisible(true);
+				dispose();
+			}
+		});
 		for (TrainingSessionDTO c : controller.getSessions(controller.getUser())) {
 			System.out.println("Traininn session ::::::" + c);
 			dataModel.addRow( new Object[] {c.getTitle(), c.getSport(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getFinishDate()), c.getDistance() + " km - "+c.getDuration()+" min"} );
@@ -142,6 +151,7 @@ public class TrainingSessionsWindow extends JFrame{
 		
 		dataT.setModel(dataModel);
 		name = new JLabel(tsc.getUser().getEmail());
+		buttons.add(back);
 		buttons.add(createT);
 		getContentPane().add(name,BorderLayout.NORTH);
 		getContentPane().add(new JScrollPane(dataT), BorderLayout.CENTER);

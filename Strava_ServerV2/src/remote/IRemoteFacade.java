@@ -6,7 +6,6 @@ import java.util.Date;
 import java.util.List;
 import java.util.Map;
 
-import data.domain.Challenge;
 import data.dto.ChallengeDTO;
 import data.dto.SportDTO;
 import data.dto.TrainingSessionDTO;
@@ -25,4 +24,6 @@ public interface IRemoteFacade extends Remote {
 	public void acceptChallenge(UserDTO user, int challenge) throws RemoteException;
 	public List<TrainingSessionDTO> getSessions(UserDTO user) throws RemoteException;
 	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int dintance, Date startDate, Date finishdate, int duration) throws RemoteException;
+	public String getMapChallenge(UserDTO user, int selectedRow) throws RemoteException;
+	public void modifyMapChallenge(UserDTO user, int selectedRow, float value) throws RemoteException;
 }

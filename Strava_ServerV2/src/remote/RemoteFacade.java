@@ -2,6 +2,7 @@ package remote;
 
 import java.rmi.RemoteException;
 import java.rmi.server.UnicastRemoteObject;
+import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
 import java.util.List;
@@ -9,6 +10,7 @@ import java.util.Map;
 
 import dao.ChallengeDAO;
 import dao.UserDAO;
+import data.domain.Challenge;
 import data.domain.TrainingSession;
 import data.domain.User;
 import data.dto.ChallengeAssembler;
@@ -40,6 +42,19 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 		return TrainingSessionAssembler.getInstance().categoryToDTO(this.serverState.get(user.getToken()).getTraininSL());
 	}
 
+	@Override
+	public String getMapChallenge(UserDTO user, int selectedRow) {
+		List<Challenge> chL = new ArrayList<Challenge>();
+		chL.addAll(this.serverState.get(user.getToken()).getChallengeA().keySet());
+		return this.serverState.get(user.getToken()).getChallengeA().get(chL.get(selectedRow)) + "";
+	}
+	@Override
+	public void modifyMapChallenge(UserDTO user, int selectedRow, float value) {
+		List<Challenge> chL = new ArrayList<Challenge>();
+		chL.addAll(this.serverState.get(user.getToken()).getChallengeA().keySet());
+		if(chL.get(selectedRow).getTargetDistance() < value);
+		this.serverState.get(user.getToken()).getChallengeA().put(chL.get(selectedRow), value);
+	}
 	/**
 	 * Creates training sesions
 	 */
@@ -72,11 +87,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 		if(!this.serverState.get(user.getToken()).getChallengeA().containsKey(ChallengeDAO.getInstance().getAll().get(challenge))) {
 			this.serverState.get(user.getToken()).getChallengeA().put(ChallengeDAO.getInstance().getAll().get(challenge), 0f);
 			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
-		}
-		/*if(!this.serverState.get(user.getToken()).getChallengeAL().contains(ChallengeDAO.getInstance().getAll().get(challenge))) {
-			this.serverState.get(user.getToken()).getChallengeAL().add(ChallengeDAO.getInstance().getAll().get(challenge));
-			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
-		}*/else throw new RemoteException("Challenge already Accepted");
+		}else throw new RemoteException("Challenge already Accepted");
 	}
 
 	@Override

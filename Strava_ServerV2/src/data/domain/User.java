@@ -3,6 +3,7 @@ package data.domain;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
+import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -45,7 +46,7 @@ public class User {
 	 * AKA, how much of the objective is done (in km).
 	 */
 	@Join
-	private HashMap<Challenge, Float> challengeA = new HashMap<Challenge, Float>();
+	private Map<Challenge, Float> challengeA = new LinkedHashMap<Challenge, Float>();
 	
 	@Join
 	private List<TrainingSession> traininSL = new ArrayList<TrainingSession>();

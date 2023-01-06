@@ -74,4 +74,19 @@ public class ChallengeController {
 		public ServiceLocator getService() {
 			return this.serviceLocator;
 		}
+		public String getMapChallenge(int selectedRow) {
+			try {
+				return this.serviceLocator.getService().getMapChallenge(this.user, selectedRow);
+			}catch(Exception e) {
+				System.out.println("# Error modifying the challenge "+ e);
+			}
+			return "0";
+		}
+		public void modifyMapChallenge(int selectedRow, float value) {
+			try {
+				this.serviceLocator.getService().modifyMapChallenge(this.user, selectedRow, value);
+			}catch(Exception e) {
+				System.out.println("# Error modifying the challenge "+ e);
+			}
+		}
 }
