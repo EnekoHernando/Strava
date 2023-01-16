@@ -9,7 +9,7 @@ import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
 
 @PersistenceCapable(detachable = "true")
-public class Challenge {
+public class Challenge implements Comparable<Challenge> {
 	
 	private String name;
 	private Date startDate;
@@ -20,6 +20,7 @@ public class Challenge {
 	
 	@Extension(vendorName="datanucleus", key="enum-value-getter", value="getValue")
 	private Sport sport;
+	
 	@Join
 	public List<TrainingSession> trss = new ArrayList<>(); 
 	
@@ -81,5 +82,10 @@ public class Challenge {
 			return this.name.equals(((Challenge)obj).name);
 		}
 		return false;
+	}
+
+	@Override
+	public int compareTo(Challenge o) {
+		return o.getName().compareTo(name);	
 	}
 }

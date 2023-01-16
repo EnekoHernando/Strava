@@ -3,7 +3,7 @@ package data.dto;
 import java.io.Serializable;
 import java.util.Date;
 
-public class ChallengeDTO implements Serializable{
+public class ChallengeDTO implements Serializable, Comparable<ChallengeDTO>{
 	private static final long serialVersionUID = 1L;
 	private String name = "null";
 	private Date startDate = new Date();
@@ -58,5 +58,10 @@ public class ChallengeDTO implements Serializable{
 			return this.name.equals(((ChallengeDTO)obj).name) && this.sport.equals(((ChallengeDTO)obj).sport);
 		}
 		return false;
+	}
+	@Override
+	public int compareTo(ChallengeDTO o) {
+		
+		return o.name.compareTo(name);
 	}
 }

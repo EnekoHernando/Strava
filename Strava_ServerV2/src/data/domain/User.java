@@ -3,12 +3,13 @@ package data.domain;
 import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashMap;
-import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 
 @PersistenceCapable(detachable="true")
 public class User {	
@@ -35,19 +36,15 @@ public class User {
 		this.heartRateAtRest = heartRateAtRest;
 	}
 
-	/*@Join
-	private List<Challenge> challengeAL = new ArrayList<Challenge>();
-	
-	@Join
-	private List<Challenge> challengeCL = new ArrayList<Challenge>();
-	*/
 	/**
 	 * The map registers the challenge accepted and the completition of those, 
 	 * AKA, how much of the objective is done (in km).
 	 */
+	@Persistent(defaultFetchGroup="true")
 	@Join
-	private Map<Challenge, Float> challengeA = new LinkedHashMap<Challenge, Float>();
+	private Map<Challenge, Float> challengeA = new TreeMap<Challenge, Float>();
 	
+	@Persistent(defaultFetchGroup="true")
 	@Join
 	private List<TrainingSession> traininSL = new ArrayList<TrainingSession>();
 		
@@ -55,6 +52,7 @@ public class User {
 	public Map<Challenge, Float> getChallengeA() {
 		return challengeA;
 	}
+	
 	public void setChallengeA(HashMap<Challenge, Float> challengeA) {
 		this.challengeA = challengeA;
 	}

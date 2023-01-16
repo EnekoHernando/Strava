@@ -1,9 +1,9 @@
 package data.dto;
 
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.TreeMap;
 
 import data.domain.Challenge;
 
@@ -37,7 +37,7 @@ public class ChallengeAssembler {
 		return dtos;
 	}
 	public Map<ChallengeDTO, Float> mapToDTO(Map<Challenge, Float> challengesA){
-		Map<ChallengeDTO, Float> map = new HashMap<>();
+		Map<ChallengeDTO, Float> map = new TreeMap<>();
 		for(Challenge c: challengesA.keySet()) {
 			map.put(this.challengeToDTO(c), challengesA.get(c));
 		}

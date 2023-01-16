@@ -14,8 +14,9 @@ import javax.jdo.annotations.Order;
 public class TrainingSession {
 	@Persistent(defaultFetchGroup="true", mappedBy="traininSL", dependentElement = "true")
 	private User owner;
+	
 	private String title;
-	@Extension(vendorName="datanucleus", key="enum-value-getter", value="getValue")
+	@Extension(vendorName="datanucleus", key="enum-value-getter", value="getValue")	
 	private Sport sport;
 	private int distance;
 	private Date startDate;
@@ -23,6 +24,7 @@ public class TrainingSession {
 	private int duration;
 	
 	@Join
+	@Persistent(defaultFetchGroup="true")
 	private List<Challenge> challenges = new ArrayList<>();
 	
 	public TrainingSession() {}

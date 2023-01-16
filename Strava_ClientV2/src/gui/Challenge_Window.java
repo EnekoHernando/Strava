@@ -10,6 +10,7 @@ import java.text.SimpleDateFormat;
 import java.util.Arrays;
 import java.util.Date;
 import java.util.Map;
+import java.util.TreeMap;
 import java.util.Vector;
 
 import javax.swing.JButton;
@@ -47,7 +48,8 @@ public class Challenge_Window extends JFrame{
 	private ChallengeController controller;
 	private JButton createChallenges;
 	private Challenge_Window cw;
-
+	private ChallengeCellRenderer cellRenderer;
+	
 	//FIELD FOR THE CREATING OF THE CHALLENGE
 	boolean creating = false;
 	private JLabel nameL;
@@ -67,7 +69,7 @@ public class Challenge_Window extends JFrame{
 	
 	//FIELDS TO ALTER THE ACCEPTED CHALLENGES
 	private JTextField kmsDone;
-	
+	private int selected = -1;
 	
 	public Challenge_Window(ChallengeController cC, LogIn_Window lw) {
 		cw = this;
@@ -90,6 +92,7 @@ public class Challenge_Window extends JFrame{
 		create = new JPanel();
 		panel = new JPanel();
 		kmsDone = new JTextField("0",10);
+		kmsDone.setEnabled(false);
 		create.setLayout(new GridLayout(6,0));
 		create.add(nameL);
 		create.add(nameT);
@@ -108,7 +111,9 @@ public class Challenge_Window extends JFrame{
 		//FIELD INSTANCE FOR THE MAIN WINDOW
 		checkBox = new JRadioButton();
 		this.controller = cC;
+		cellRenderer = new ChallengeCellRenderer();
 		tableC = new JTable();
+		tableC.setDefaultRenderer(Object.class, cellRenderer);
 		nameU = new JTextField(this.controller.getUser().getEmail(), 25);
 		nameU.setEditable(false);
 		userInfo = new JButton("User info");
@@ -141,7 +146,9 @@ public class Challenge_Window extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				accepting=false;
 				modelTable("Accepted");
-				tableC.setModel(dataModel);
+				for(int i = 0; i<tableC.getRowCount();i++) {
+					System.out.println(tableC.getValueAt(i, 0));
+				}
 				tableC.getColumnModel().getColumn(0).setMinWidth(200);
 				tableC.getColumnModel().getColumn(0).setMaxWidth(200);
 				tableC.getColumnModel().getColumn(1).setMinWidth(100);
@@ -167,7 +174,6 @@ public class Challenge_Window extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				accepting=true;
 				modelTable("all");
-				tableC.setModel(dataModel);
 				tableC.getColumnModel().getColumn(0).setMinWidth(200);
 				tableC.getColumnModel().getColumn(0).setMaxWidth(200);
 				tableC.getColumnModel().getColumn(1).setMinWidth(100);
@@ -189,7 +195,9 @@ public class Challenge_Window extends JFrame{
 						}
 					}
 				}else if(!accepting) {
+					selected = tableC.getSelectedRow();
 					kmsDone.setText(controller.getMapChallenge(tableC.getSelectedRow()));
+					kmsDone.setEnabled(true);
 				}
 			}
 		});
@@ -198,7 +206,10 @@ public class Challenge_Window extends JFrame{
 			@Override
 			public void actionPerformed(ActionEvent e) {
 				try {
-					controller.modifyMapChallenge(tableC.getSelectedRow(), Float.parseFloat(kmsDone.getText()));
+					if(selected>=0) controller.modifyMapChallenge(tableC.getSelectedRow(), Float.parseFloat(kmsDone.getText()));
+					selected = -1;
+					kmsDone.setText(0+"");
+					kmsDone.setEnabled(false);
 				}catch (Exception e1) {
 					System.out.println("# Could not update the progress.");
 				}
@@ -254,7 +265,6 @@ public class Challenge_Window extends JFrame{
 			}
 		});
 		modelTable("all");
-		tableC.setModel(dataModel);
 		tableC.getColumnModel().getColumn(0).setMinWidth(200);
 		tableC.getColumnModel().getColumn(0).setMaxWidth(200);
 		tableC.getColumnModel().getColumn(1).setMinWidth(100);
@@ -303,6 +313,8 @@ public class Challenge_Window extends JFrame{
 				dataModel.addRow( new Object[] {c.getName(), c.getSport().name(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getEndDate()), c.getTargetDistance() + " km - "+c.getTargetTime()+" min", checkBox.isSelected()} );
 			}
 			tableC.setModel(dataModel);
+			cellRenderer.setFilter("All");	
+			tableC.repaint();
 			break;
 			
 		default:
@@ -311,12 +323,15 @@ public class Challenge_Window extends JFrame{
 				new Vector<Vector<Object>>(),  
 				headers  
 			);
-			Map<ChallengeDTO, Float> map = controller.getAcceptedChallenges(controller.getUser());
+			Map<ChallengeDTO, Float> map = new TreeMap<>(controller.getAcceptedChallenges(controller.getUser()));
 			for (ChallengeDTO c : map.keySet()) {
 				float progress = (map.get(c)/c.getTargetDistance()) *100; 
-				dataModel.addRow( new Object[] {c.getName(), c.getSport().name(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getEndDate()), c.getTargetDistance() + " km - "+c.getTargetTime()+" min", progress+"%"} );
+				if(progress>100) progress = 100f;
+				dataModel.addRow( new Object[] {c.getName(), c.getSport().name(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getEndDate()), c.getTargetDistance() + " km - "+c.getTargetTime()+" min", progress+""} );
 			}
 			tableC.setModel(dataModel);
+			cellRenderer.setFilter("Accepted");
+			tableC.repaint();
 			break;
 		}
 	}
