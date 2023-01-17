@@ -60,9 +60,12 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int dintance, Date startDate,
-			Date finishdate, int duration) throws RemoteException {
-		TrainingSession ts = TrainingAppSessionService.getInstance().createTrainingSession(this.serverState.get(user.getToken()), title, SportAssembler.getInstance().dtoToSport(sport), dintance, startDate, finishdate, duration);
-		if(this.serverState.get(user.getToken()).getTraininSL().contains(ts)) {
+			Date finishdate, int duration, int challenge) throws RemoteException {
+		List<Challenge> chL = new ArrayList<Challenge>();
+		chL.addAll(this.serverState.get(user.getToken()).getChallengeA().keySet());
+		TrainingSession ts = TrainingAppSessionService.getInstance().createTrainingSession(this.serverState.get(user.getToken()), title, SportAssembler.getInstance().dtoToSport(sport), dintance, startDate, finishdate, duration, chL.get(challenge));
+		this.serverState.get(user.getToken()).getChallengeA().put(ts.getChallenges(), this.serverState.get(user.getToken()).getChallengeA().get(ts.getChallenges())+ts.getDistance());
+		if(!this.serverState.get(user.getToken()).getTraininSL().contains(ts)) {
 			this.serverState.get(user.getToken()).getTraininSL().add(ts);
 			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
 		}

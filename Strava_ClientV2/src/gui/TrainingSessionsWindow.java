@@ -13,6 +13,7 @@ import javax.swing.JButton;
 import javax.swing.JComboBox;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
@@ -127,29 +128,36 @@ public class TrainingSessionsWindow extends JFrame{
 					getContentPane().add(name,BorderLayout.NORTH);
 					getContentPane().add(creation, BorderLayout.CENTER);
 					getContentPane().add(buttons, BorderLayout.SOUTH);
-				}else{
-					createT.setText("Create Training");
-					creating = false;
-					try {
-						SportDTO spdto = (SportDTO) sportT.getSelectedItem();
-						if(spdto == null) {
-							spdto = SportDTO.RUNNING;
-						}
-						controller.createTrainingSession(controller.getUser(), nameST.getText(), spdto, Integer.parseInt(distanceT.getText())
-								, sdf2.parse(startDateT.getText()), sdf2.parse(finishDateT.getText()), Integer.parseInt(durationT.getText()));
-					}catch (Exception e1) {
-					}
 					nameST.setText("");
 					distanceT.setText("0");
 					startDateT.setText(sdf2.format(new Date( System.currentTimeMillis())));
 					finishDateT.setText(sdf2.format(new Date( System.currentTimeMillis()+24*3600000L)));
 					durationT.setText("0");
+				}else{
+					createT.setText("Create Training");
+					creating = false;
+					
+					try {
+						SportDTO spdto = (SportDTO) sportT.getSelectedItem();
+						int challenge = challengeT.getSelectedIndex();
+						if(spdto == null) {
+							spdto = SportDTO.RUNNING;
+						}
+						if(challenge != -1) {
+							System.out.println(" " +controller.getUser()+ " " +nameST.getText()+ " " +spdto+ " " +Integer.parseInt(distanceT.getText())
+								+ " " +sdf2.parse(startDateT.getText())+ " " +sdf2.parse(finishDateT.getText())+ " " +Integer.parseInt(durationT.getText())+ " " +challenge);
+						controller.createTrainingSession(controller.getUser(), nameST.getText(), spdto, Integer.parseInt(distanceT.getText())
+								, sdf2.parse(startDateT.getText()), sdf2.parse(finishDateT.getText()), Integer.parseInt(durationT.getText()), challenge);
+						}else new JOptionPane("No challenge has been selected", JOptionPane.ERROR_MESSAGE);
+					}catch (Exception e1) {
+						
+					}
 					getContentPane().removeAll();
 					getContentPane().add(name, BorderLayout.NORTH);
 					getContentPane().add(new JScrollPane(dataT), BorderLayout.CENTER);
 					getContentPane().add(buttons, BorderLayout.SOUTH);
 					repaint();
-					headers = new Vector<String>( Arrays.asList( "Ttile", "sport", "Start Date-End Date", "Distance-Time") );
+					headers = new Vector<String>( Arrays.asList( "Title", "Sport", "Start Date-End Date", "Distance-Time") );
 					dataModel = new DefaultTableModel(  
 						new Vector<Vector<Object>>(),  
 						headers  

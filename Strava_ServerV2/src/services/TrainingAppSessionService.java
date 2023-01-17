@@ -2,6 +2,7 @@ package services;
 
 import java.util.Date;
 
+import data.domain.Challenge;
 import data.domain.Sport;
 import data.domain.TrainingSession;
 import data.domain.User;
@@ -16,7 +17,7 @@ public class TrainingAppSessionService {
 		return instance;
 	}
 	public TrainingSession createTrainingSession(User user, String title, Sport sport, int dintance,
-			Date startDate, Date finishdate, int duration) {
+			Date startDate, Date finishdate, int duration, Challenge c) {
 		TrainingSession ts = new TrainingSession();
 		ts.setOwner(user);
 		ts.setTitle(title);
@@ -25,7 +26,7 @@ public class TrainingAppSessionService {
 		ts.setDuration(duration);
 		ts.setStartDate(startDate);
 		ts.setFinishDate(finishdate);
-		System.out.println("TrainingService new Traingin " + ts);
+		ts.setChallenges(c);
 		return ts; 
 	}
 }

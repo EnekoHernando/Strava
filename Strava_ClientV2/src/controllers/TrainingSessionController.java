@@ -32,9 +32,9 @@ public class TrainingSessionController {
 		return new ArrayList<>(Arrays.asList(new TrainingSessionDTO()));
 	}
 	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int distance,
-			Date startDate, Date finishdate, int duration) {
+			Date startDate, Date finishdate, int duration, int challenge) {
 		try {
-			this.servicelocator.getService().createTrainingSession(user,title,sport,distance,startDate,finishdate,duration);
+			this.servicelocator.getService().createTrainingSession(user,title,sport,distance,startDate,finishdate,duration, challenge);
 		} catch (Exception e) {
 			
 		}

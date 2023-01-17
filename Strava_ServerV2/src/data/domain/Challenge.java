@@ -74,10 +74,20 @@ public class Challenge implements Comparable<Challenge> {
 	public void setSport(Sport sport) {
 		this.sport = sport;
 	}
+
+	public List<TrainingSession> getTrss() {
+		return trss;
+	}
+
+	public void setTrss(List<TrainingSession> trss) {
+		this.trss = trss;
+	}
+	
 	@Override
 	public String toString() {
 		return "Challenge: "+ this.name + ", Sport" + this.sport;
 	}
+
 	@Override
 	public boolean equals(Object obj) {
 		if (this.getClass().getName().equals(obj.getClass().getName())) {

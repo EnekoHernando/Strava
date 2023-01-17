@@ -34,7 +34,7 @@ public class UserDAO extends DataAccessObjectBase implements IDataAccessObject<U
 	    	pm.makePersistent(user);
 	    	tx.commit();
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex);
+		   	System.out.println("   $ Error retreiving an extent: " + ex.getStackTrace());
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
