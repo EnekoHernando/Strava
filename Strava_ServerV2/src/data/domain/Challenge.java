@@ -7,6 +7,7 @@ import java.util.List;
 import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.Join;
 import javax.jdo.annotations.PersistenceCapable;
+import javax.jdo.annotations.Persistent;
 
 @PersistenceCapable(detachable = "true")
 public class Challenge implements Comparable<Challenge> {
@@ -22,6 +23,7 @@ public class Challenge implements Comparable<Challenge> {
 	private Sport sport;
 	
 	@Join
+	@Persistent(defaultFetchGroup = "true", mappedBy = "challenge", dependentElement = "true")
 	public List<TrainingSession> trss = new ArrayList<>(); 
 	
 	public Challenge() {}

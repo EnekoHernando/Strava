@@ -335,4 +335,7 @@ public class Challenge_Window extends JFrame{
 			break;
 		}
 	}
+	public ChallengeController getController() {
+		return controller;
+	}
 }

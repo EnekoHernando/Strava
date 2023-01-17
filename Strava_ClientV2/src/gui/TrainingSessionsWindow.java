@@ -20,6 +20,7 @@ import javax.swing.JTextField;
 import javax.swing.table.DefaultTableModel;
 
 import controllers.TrainingSessionController;
+import data.dto.ChallengeDTO;
 import data.dto.SportDTO;
 import data.dto.TrainingSessionDTO;
 
@@ -48,7 +49,10 @@ public class TrainingSessionsWindow extends JFrame{
 	private JLabel durationL;
 	private JTextField durationT;
 	private JComboBox<SportDTO> sportT;
+	private JComboBox<ChallengeDTO> challengeT;
+	private JLabel challengeL;
 	private JPanel creation;
+	private JLabel sportL;
 	
 	
 	public TrainingSessionsWindow(TrainingSessionController tsc, Challenge_Window cw) {
@@ -69,9 +73,16 @@ public class TrainingSessionsWindow extends JFrame{
 		durationL = new JLabel("Duration: ");
 		durationT = new JTextField("0");
 		creation = new JPanel();
+		challengeL = new JLabel("Challenge: ");
+		challengeT = new JComboBox<>();
+		sportL = new JLabel("Sport: ");
 		sportT = new JComboBox<>();
 		sportT.addItem(SportDTO.RUNNING);
 		sportT.addItem(SportDTO.CYCLING);
+		for(ChallengeDTO c: cw.getController().getAcceptedChallenges(cw.getController().getUser()).keySet()) {
+			challengeT.addItem(c);
+		}
+		
 		
 		creation.add(nameSL);
 		creation.add(nameST);
@@ -83,7 +94,11 @@ public class TrainingSessionsWindow extends JFrame{
 		creation.add(finishDateT);
 		creation.add(durationL);
 		creation.add(durationT);
-		creation.setLayout(new GridLayout(5,2));
+		creation.add(sportL);
+		creation.add(sportT);
+		creation.add(challengeL);
+		creation.add(challengeT);
+		creation.setLayout(new GridLayout(7,2));
 		headers = new Vector<String>( Arrays.asList( "Ttile", "sport", "Start Date-End Date", "Distance-Time") );
 		dataModel = new DefaultTableModel(  
 			new Vector<Vector<Object>>(),  
@@ -131,7 +146,7 @@ public class TrainingSessionsWindow extends JFrame{
 					durationT.setText("0");
 					getContentPane().removeAll();
 					getContentPane().add(name, BorderLayout.NORTH);
-					getContentPane().add(dataT, BorderLayout.CENTER);
+					getContentPane().add(new JScrollPane(dataT), BorderLayout.CENTER);
 					getContentPane().add(buttons, BorderLayout.SOUTH);
 					repaint();
 					headers = new Vector<String>( Arrays.asList( "Ttile", "sport", "Start Date-End Date", "Distance-Time") );

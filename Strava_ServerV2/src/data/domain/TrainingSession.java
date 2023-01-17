@@ -1,14 +1,10 @@
 package data.domain;
 
-import java.util.ArrayList;
 import java.util.Date;
-import java.util.List;
+
+import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
-import javax.jdo.annotations.Element;
-import javax.jdo.annotations.Extension;
-import javax.jdo.annotations.Join;
-import javax.jdo.annotations.Order;
 
 @PersistenceCapable
 public class TrainingSession {
@@ -23,9 +19,8 @@ public class TrainingSession {
 	private Date finishDate;
 	private int duration;
 	
-	@Join
 	@Persistent(defaultFetchGroup="true")
-	private List<Challenge> challenges = new ArrayList<>();
+	private Challenge challenge;
 	
 	public TrainingSession() {}
 	
@@ -41,12 +36,12 @@ public class TrainingSession {
 		this.duration = duration;
 	}
 
-	public List<Challenge> getChallenges() {
-		return challenges;
+	public Challenge getChallenges() {
+		return challenge;
 	}
 
-	public void setChallenges(List<Challenge> challenges) {
-		this.challenges = challenges;
+	public void setChallenges(Challenge challenges) {
+		this.challenge = challenges;
 	}
 
 	public String getTitle() {
@@ -94,7 +89,7 @@ public class TrainingSession {
 	}
 	@Override
 	public String toString() {
-		return "Title: "+this.title+" Start Date: "+this.startDate+" FinishDate: " + this.finishDate+" Challenges: " + this.challenges;
+		return "Title: "+this.title+" Start Date: "+this.startDate+" FinishDate: " + this.finishDate+" Challenges: " + this.challenge;
 	}
 	@Override
 	public boolean equals(Object obj) {

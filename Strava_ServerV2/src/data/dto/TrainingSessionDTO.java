@@ -13,13 +13,13 @@ public class TrainingSessionDTO implements Serializable{
 	private Date startDate;
 	private Date finishDate;
 	private int duration;
-	private List<ChallengeDTO> challenges = new ArrayList<ChallengeDTO>();
+	private ChallengeDTO challenge;
 	
-	public List<ChallengeDTO> getChallenges() {
-		return challenges;
+	public ChallengeDTO getChallenges() {
+		return challenge;
 	}
-	public void setChallenges(List<ChallengeDTO> challenges) {
-		this.challenges = challenges;
+	public void setChallenges(ChallengeDTO challenges) {
+		this.challenge = challenges;
 	}
 	public int getDuration() {
 		return duration;
@@ -60,8 +60,7 @@ public class TrainingSessionDTO implements Serializable{
 	
 	@Override
 	public String toString() {
-		// TODO Auto-generated method stub
-		return "Title: "+this.title+" Start Date: "+this.startDate+" FinishDate: " + this.finishDate + ", Challenges" + this.challenges;
+		return "Title: "+this.title+" Start Date: "+this.startDate+" FinishDate: " + this.finishDate + ", Challenges" + this.challenge;
 	}
 	
 }

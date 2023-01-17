@@ -39,21 +39,22 @@ public class MP {
 		Challenge c1 = new Challenge("Here goes the name", new Date(System.currentTimeMillis()), new Date(System.currentTimeMillis()+86400L), 200, 200, Sport.CYCLING);
 		Challenge c2 = new Challenge("DAY D V2", sdf2.parse("6/6/2022"), sdf2.parse("7/6/2022"), 20, 15, Sport.RUNNING_CYCLING);
 		Challenge c3 = new Challenge("Run when u r horny", new Date(System.currentTimeMillis()), new Date(System.currentTimeMillis() + (long) (86400*5)), 20, 30, Sport.RUNNING);
-		ChallengeDAO.getInstance().save(c1);
-		ChallengeDAO.getInstance().save(c2);
-		ChallengeDAO.getInstance().save(c3);
 		User u1 = new User("eneko",org.apache.commons.codec.digest.DigestUtils.sha1Hex("1234"), new Date(System.currentTimeMillis()), 100, 175,120,60);
 		u1.getChallengeA().put(c1,150f);
 		TrainingSession ts1 = new TrainingSession(u1, "Run until u can't breath", Sport.RUNNING, 10, 
 				new Date(System.currentTimeMillis()), new Date(System.currentTimeMillis()+86400L), 10);
-		ts1.getChallenges().add(c1);
+		
+		ts1.setChallenges(c1);
 		u1.getTraininSL().add(ts1);
 		UserDAO.getInstance().save(u1);
 		User u2 = new User("winston.churchill", org.apache.commons.codec.digest.DigestUtils.sha1Hex("GodSaveTheQueen1960"), sdf2.parse("30/11/1974"), 130, 165, 150, 70);
 		u2.getChallengeA().put(c2,20f);
 		TrainingSession ts2 = new TrainingSession(u2, "Win WW3", Sport.RUNNING_CYCLING, 2000, sdf2.parse("1/9/2022"), sdf2.parse("2/9/2022"), 2190);
-		ts2.getChallenges().add(c2);
+		ts2.setChallenges(c2);
 		u2.getTraininSL().add(ts2);
 		UserDAO.getInstance().save(u2);
+		ChallengeDAO.getInstance().save(c1);
+		ChallengeDAO.getInstance().save(c2);
+		ChallengeDAO.getInstance().save(c3);
 	}
 }
