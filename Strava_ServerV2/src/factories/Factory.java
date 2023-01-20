@@ -16,9 +16,9 @@ public class Factory {
 	public IGateWay createGateWay(String type, String[] args ) {
 		switch (type) {
 			case "Google":
-				return GateWayGoogle.getInstance("//"+args[0]+":"+args[1]+"/"+args[2]);			
+				return GateWayGoogle.getInstance("//"+args[0]+":"+args[1]+"/"+args[3]);			
 			case "Facebook":
-				return GateWayFacebook.getInstance(args[0], args[3]);
+				return GateWayFacebook.getInstance(args[0], args[4]);
 			default:
 				return null;
 		}

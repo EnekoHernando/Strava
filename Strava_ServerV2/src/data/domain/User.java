@@ -131,6 +131,15 @@ public class User {
 		return password;
 	}
 	
+	public void calculateProgress() {
+		for(Challenge c: challengeA.keySet()) {
+			Float progress = 0f;
+			for(TrainingSession tr : c.getTrss()) {
+				progress+=tr.getDistance();
+			}
+			challengeA.put(c, progress);
+		}
+	}
 	@Override
 	public String toString() {
 		return "User [token=" + token + ", email=" + email + ", password=" + password + ", birthdate=" + birthdate

@@ -17,7 +17,7 @@ public class DataAccessObjectBase {
 			pm.deletePersistent(object);			
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println(" $ Error deleting an object: " + ex.getMessage());
+			System.out.println("$ Error deleting an object: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -32,11 +32,11 @@ public class DataAccessObjectBase {
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
-			System.out.println("* Storing a User: "+ object);
+			System.out.println("* Storing a "+object.getClass()+" : "+ object);
 			pm.makePersistent(object);
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println(" $ Error storing an object: " + ex.getMessage());
+			System.out.println("$ Error storing an object: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();

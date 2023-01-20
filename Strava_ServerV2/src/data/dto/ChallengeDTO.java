@@ -50,7 +50,7 @@ public class ChallengeDTO implements Serializable, Comparable<ChallengeDTO>{
 	}
 	@Override
 	public String toString() {
-		return "Challenge: "+ this.name + ", Sport: "+ this.sport;
+		return this.name;
 	}
 	@Override
 	public boolean equals(Object obj) {

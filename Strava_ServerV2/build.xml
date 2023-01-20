@@ -68,11 +68,11 @@
         	<jvmarg value="-Djava.rmi.server.codebase=file:${bin.dir}/"/>
 			<jvmarg value="-Djava.security.policy=${policy.file}"/>
 			<jvmarg value="-Dlog4j.configuration=log4j.properties"/>
-        	<arg value="${rmiregistry.IP}"/> 
-	 		<arg value="${rmiregistry.port}"/> 
-			<arg value="${server.name}"/>
-			<arg value="${sgoogle.name}"/>
-			<arg value="${facebook.port}"/>
+        	<arg value="${rmiregistry.IP}"/> <!-- 0 -->
+	 		<arg value="${rmiregistry.port}"/> <!-- 1 -->
+			<arg value="${server.name}"/> <!-- 2 -->
+			<arg value="${sgoogle.name}"/> <!-- 3 -->
+			<arg value="${facebook.port}"/> <!-- 4 -->
         </java>
     </target>
 </project>

@@ -82,11 +82,4 @@ public class ChallengeController {
 			}
 			return "0";
 		}
-		public void modifyMapChallenge(int selectedRow, float value) {
-			try {
-				this.serviceLocator.getService().modifyMapChallenge(this.user, selectedRow, value);
-			}catch(Exception e) {
-				System.out.println("# Error modifying the challenge "+ e);
-			}
-		}
 }

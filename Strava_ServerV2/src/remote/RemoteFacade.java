@@ -21,7 +21,7 @@ import data.dto.TrainingSessionAssembler;
 import data.dto.TrainingSessionDTO;
 import data.dto.UserAssembler;
 import data.dto.UserDTO;
-import gateways.MailSender;
+import mailSender.MailSender;
 import services.ChallengeAppService;
 import services.LoginRegisterAppService;
 import services.TrainingAppSessionService;
@@ -47,15 +47,10 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	public String getMapChallenge(UserDTO user, int selectedRow) {
 		List<Challenge> chL = new ArrayList<Challenge>();
 		chL.addAll(this.serverState.get(user.getToken()).getChallengeA().keySet());
+		this.serverState.get(user.getToken()).calculateProgress();
 		return this.serverState.get(user.getToken()).getChallengeA().get(chL.get(selectedRow)) + "";
 	}
-	@Override
-	public void modifyMapChallenge(UserDTO user, int selectedRow, float value) {
-		List<Challenge> chL = new ArrayList<Challenge>();
-		chL.addAll(this.serverState.get(user.getToken()).getChallengeA().keySet());
-		if(chL.get(selectedRow).getTargetDistance() < value);
-		this.serverState.get(user.getToken()).getChallengeA().put(chL.get(selectedRow), value);
-	}
+	
 	/**
 	 * Creates training sesions
 	 */
@@ -72,10 +67,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 		if(challengeSelected != null) {
 			TrainingSession ts = TrainingAppSessionService.getInstance().createTrainingSession(this.serverState.get(user.getToken()), title, SportAssembler.getInstance().dtoToSport(sport), dintance, startDate, finishdate, duration, challengeSelected);
 			System.out.println("CREADA LA TRAINNING SESSION");//FIXME
-			Float f = this.serverState.get(user.getToken()).getChallengeA().get(ts.getChallenge())+ts.getDistance();
-			System.out.println("CALCULADA LA NUEVA DISTANCIA");//FIXME
-			this.serverState.get(user.getToken()).getChallengeA().replace(ts.getChallenge(), f);
-			System.out.println("MAPA ACTUALIZADO");//FIXME
+			challengeSelected.getTrss().add(ts);
 			if(!this.serverState.get(user.getToken()).getTraininSL().contains(ts)) {
 				System.out.println("DENTRO DEL IF"); //FIXME
 				this.serverState.get(user.getToken()).getTraininSL().add(ts);
@@ -88,6 +80,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 		}
 		else throw new RemoteException("The selected challenge does not exist.");
 	}
+	
 	/**
 	 * Takes community Challenge and accept them
 	 */
@@ -101,6 +94,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 
 	@Override
 	public Map<ChallengeDTO, Float> getAcceptedChallenges(UserDTO user) throws RemoteException {
+		this.serverState.get(user.getToken()).calculateProgress();
 		return ChallengeAssembler.getInstance().mapToDTO(this.serverState.get(user.getToken()).getChallengeA());
 	}
 

@@ -69,11 +69,10 @@ public class LogIn_Window extends JFrame{
 	
 	public LogIn_Window(LoginController controller) {
 		this.controller = controller;
-		@SuppressWarnings("unused")
 		LogIn_Window instance = this;
 		try {
 			logo = new JLabel(new ImageIcon(ImageIO.read(new File("img/Logo_Strava.png"))));
-			loginB = new JButton(new ImageIcon(ImageIO.read(new File("img/sign_in.png")).getScaledInstance(75, 75, 0)));
+			loginB = new JButton(new ImageIcon(ImageIO.read(new File("img/log_in.png")).getScaledInstance(75, 75, 0)));
 			loginB.setPreferredSize(new Dimension(75,75));
 			logInG = new JButton(new ImageIcon(ImageIO.read(new File("img/Google.png")).getScaledInstance(loginB.getPreferredSize().width, loginB.getPreferredSize().height, BufferedImage.SCALE_SMOOTH)));
 			logInG.setPreferredSize(new Dimension(75,75));
@@ -85,7 +84,7 @@ public class LogIn_Window extends JFrame{
 			signInF.setPreferredSize(new Dimension(75,75));
 			returnB = new JButton(new ImageIcon(ImageIO.read(new File("img/return.png")).getScaledInstance(75, 75, 0)));
 			returnB.setPreferredSize(new Dimension(75,75));
-			signInB = new JButton(new ImageIcon(ImageIO.read(new File("img/log_in.png")).getScaledInstance(75, 75, 0)));
+			signInB = new JButton(new ImageIcon(ImageIO.read(new File("img/sign_in.png")).getScaledInstance(75, 75, 0)));
 			signInB.setPreferredSize(new Dimension(75,75));
 		} catch (IOException e1) {
 			e1.printStackTrace();
@@ -168,7 +167,7 @@ public class LogIn_Window extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				UserDTO user = login("FaceBook");
+				UserDTO user = login("Facebook");
 				if(user!=null) {
 					ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 					cc.setUser(user);
@@ -264,7 +263,7 @@ public class LogIn_Window extends JFrame{
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				UserDTO user = register("FaceBook");
+				UserDTO user = register("Facebook");
 				if(user!=null) {
 					ChallengeController cc = new ChallengeController(LogIn_Window.this.controller.getService());
 					cc.setUser(user);

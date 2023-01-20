@@ -67,9 +67,6 @@ public class Challenge_Window extends JFrame{
 	private JPanel create;
 	private JPanel panel;
 	
-	//FIELDS TO ALTER THE ACCEPTED CHALLENGES
-	private JTextField kmsDone;
-	private int selected = -1;
 	
 	public Challenge_Window(ChallengeController cC, LogIn_Window lw) {
 		cw = this;
@@ -91,8 +88,6 @@ public class Challenge_Window extends JFrame{
 		sportT.addItem(SportDTO.RUNNING_CYCLING);
 		create = new JPanel();
 		panel = new JPanel();
-		kmsDone = new JTextField("0",10);
-		kmsDone.setEnabled(false);
 		create.setLayout(new GridLayout(6,0));
 		create.add(nameL);
 		create.add(nameT);
@@ -125,7 +120,7 @@ public class Challenge_Window extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				TrainingSessionController tsc = new TrainingSessionController(controller.getService());			
 				tsc.setUser(controller.getUser());
-				new TrainingSessionsWindow(tsc, cw);
+				new TrainingSessionsWindow(tsc, cw, lw);
 				setVisible(false);
 			}
 		});
@@ -162,7 +157,6 @@ public class Challenge_Window extends JFrame{
 				buttons.add(allChallenges);
 				buttons.add(aChallenge);
 				buttons.add(createChallenges);
-				buttons.add(kmsDone);
 				validate();
 				repaint();
 			}
@@ -194,26 +188,7 @@ public class Challenge_Window extends JFrame{
 							controller.acceptChallenge(row);
 						}
 					}
-				}else if(!accepting) {
-					selected = tableC.getSelectedRow();
-					kmsDone.setText(controller.getMapChallenge(tableC.getSelectedRow()));
-					kmsDone.setEnabled(true);
 				}
-			}
-		});
-		kmsDone.addActionListener(new ActionListener() {
-			
-			@Override
-			public void actionPerformed(ActionEvent e) {
-				try {
-					if(selected>=0) controller.modifyMapChallenge(tableC.getSelectedRow(), Float.parseFloat(kmsDone.getText()));
-					selected = -1;
-					kmsDone.setText(0+"");
-					kmsDone.setEnabled(false);
-				}catch (Exception e1) {
-					System.out.println("# Could not update the progress.");
-				}
-				modelTable("Accepted");
 			}
 		});
 		createChallenges = new JButton("Create challenge");

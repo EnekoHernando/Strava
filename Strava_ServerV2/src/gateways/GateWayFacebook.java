@@ -15,7 +15,7 @@ public class GateWayFacebook implements IGateWay{
 	
 	public static GateWayFacebook getInstance(String ip, String fport) {
 		if(instance==null) {
-			instance = new GateWayFacebook(ip,Integer.parseInt(fport));
+			instance = new GateWayFacebook(ip, Integer.parseInt(fport));
 		}
 		return instance;
 	}
@@ -23,6 +23,7 @@ public class GateWayFacebook implements IGateWay{
 		this.serverIP = ip;
 		this.serverPort = fport;
 	}
+	
 	@Override
 	public boolean logIn(String email, String password) {
 		String message = email+DELIMITER+password+DELIMITER+"Log in";

@@ -22,7 +22,6 @@ import javax.swing.table.DefaultTableModel;
 
 import controllers.TrainingSessionController;
 import data.dto.ChallengeDTO;
-import data.dto.SportDTO;
 import data.dto.TrainingSessionDTO;
 
 public class TrainingSessionsWindow extends JFrame{
@@ -36,6 +35,7 @@ public class TrainingSessionsWindow extends JFrame{
 	private JButton createT;
 	private JButton back;
 	private JPanel buttons;
+	private TrainingSessionRender cellRenderer = new TrainingSessionRender();
 	
 	//▓▓▓  CREATION OF THE SESSION  ▓▓▓
 	private boolean creating = false;
@@ -49,17 +49,17 @@ public class TrainingSessionsWindow extends JFrame{
 	private JTextField finishDateT;
 	private JLabel durationL;
 	private JTextField durationT;
-	private JComboBox<SportDTO> sportT;
 	private JComboBox<ChallengeDTO> challengeT;
 	private JLabel challengeL;
 	private JPanel creation;
-	private JLabel sportL;
 	
 	
-	public TrainingSessionsWindow(TrainingSessionController tsc, Challenge_Window cw) {
+	public TrainingSessionsWindow(TrainingSessionController tsc, Challenge_Window cw, LogIn_Window lw) {
 		
 		this.controller = tsc;
+		
 		dataT=new JTable();
+		dataT.setDefaultRenderer(Object.class, cellRenderer);
 		createT = new JButton("Create Session");
 		back = new JButton("Return");
 		buttons = new JPanel();
@@ -76,10 +76,7 @@ public class TrainingSessionsWindow extends JFrame{
 		creation = new JPanel();
 		challengeL = new JLabel("Challenge: ");
 		challengeT = new JComboBox<>();
-		sportL = new JLabel("Sport: ");
-		sportT = new JComboBox<>();
-		sportT.addItem(SportDTO.RUNNING);
-		sportT.addItem(SportDTO.CYCLING);
+		
 		if(cw.getController().getAcceptedChallenges(cw.getController().getUser()).keySet().size() > 0)
 			for(ChallengeDTO c: cw.getController().getAcceptedChallenges(cw.getController().getUser()).keySet()) 
 				challengeT.addItem(c);
@@ -87,6 +84,7 @@ public class TrainingSessionsWindow extends JFrame{
 			JOptionPane.showMessageDialog(null, "There are not any challenge in progress, please accept a new one.", "Error", JOptionPane.ERROR_MESSAGE);
 			dispose();
 		}
+		
 		creation.add(nameSL);
 		creation.add(nameST);
 		creation.add(distanceL);
@@ -97,27 +95,30 @@ public class TrainingSessionsWindow extends JFrame{
 		creation.add(finishDateT);
 		creation.add(durationL);
 		creation.add(durationT);
-		creation.add(sportL);
-		creation.add(sportT);
 		creation.add(challengeL);
-		creation.add(challengeT);
+		
 		creation.setLayout(new GridLayout(7,2));
-		headers = new Vector<String>( Arrays.asList( "Ttile", "sport", "Start Date-End Date", "Distance-Time") );
-		dataModel = new DefaultTableModel(  
-			new Vector<Vector<Object>>(),  
-			headers  
-		);
+		fillModel();
+		
+		challengeT.addActionListener(new ActionListener() {
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				if(challengeT.getSelectedItem()!=null) {
+					cellRenderer.setChallenge((ChallengeDTO) challengeT.getSelectedItem());
+					repaint();
+				}
+			}
+		});
+		
 		back.addActionListener(new ActionListener() {
 			
 			@Override
 			public void actionPerformed(ActionEvent e) {
-				cw.setVisible(true);
+				new Challenge_Window(cw.getController(), lw);
 				dispose();
 			}
 		});
-		for (TrainingSessionDTO c : controller.getSessions(controller.getUser())) {
-			dataModel.addRow( new Object[] {c.getTitle(), c.getSport(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getFinishDate()), c.getDistance() + " km - "+c.getDuration()+" min"} );
-		}
+		
 		createT.addActionListener(new ActionListener() {
 			
 			@Override
@@ -126,6 +127,10 @@ public class TrainingSessionsWindow extends JFrame{
 					creating = true;
 					createT.setText("Confirm Session");
 					getContentPane().removeAll();
+					buttons.removeAll();
+					buttons.add(back);
+					buttons.add(createT);
+					creation.add(challengeT);
 					getContentPane().add(name,BorderLayout.NORTH);
 					getContentPane().add(creation, BorderLayout.CENTER);
 					getContentPane().add(buttons, BorderLayout.SOUTH);
@@ -138,32 +143,23 @@ public class TrainingSessionsWindow extends JFrame{
 					createT.setText("Create Session");
 					creating = false;
 					try {
-						SportDTO spdto = (SportDTO) sportT.getSelectedItem();
-						if(spdto == null) {
-							spdto = SportDTO.RUNNING;
-						}
 						if(challengeT.getSelectedItem() != null) {
-							System.out.println(" " +controller.getUser().getEmail()+ " " +nameST.getText()+ " " +spdto+ " " +Integer.parseInt(distanceT.getText())
-								+ " " +sdf2.parse(startDateT.getText())+ " " +sdf2.parse(finishDateT.getText())+ " " +Integer.parseInt(durationT.getText())+ " " + ((ChallengeDTO) challengeT.getSelectedItem()).getName());
-						controller.createTrainingSession(controller.getUser(), nameST.getText(), spdto, Integer.parseInt(distanceT.getText())
+							controller.createTrainingSession(controller.getUser(), nameST.getText(), ((ChallengeDTO) challengeT.getSelectedItem()).getSport(), Integer.parseInt(distanceT.getText())
 								, sdf2.parse(startDateT.getText()), sdf2.parse(finishDateT.getText()), Integer.parseInt(durationT.getText()), (ChallengeDTO) challengeT.getSelectedItem());
 						}else new JOptionPane("No challenge has been selected", JOptionPane.ERROR_MESSAGE);
 					}catch (Exception e1) {
 						
 					}
 					getContentPane().removeAll();
+					buttons.removeAll();
+					buttons.add(back);
+					buttons.add(createT);
+					buttons.add(challengeT);
 					getContentPane().add(name, BorderLayout.NORTH);
 					getContentPane().add(new JScrollPane(dataT), BorderLayout.CENTER);
 					getContentPane().add(buttons, BorderLayout.SOUTH);
 					repaint();
-					headers = new Vector<String>( Arrays.asList( "Title", "Sport", "Start Date-End Date", "Distance-Time") );
-					dataModel = new DefaultTableModel(  
-						new Vector<Vector<Object>>(),  
-						headers  
-					);
-					for (TrainingSessionDTO c : controller.getSessions(controller.getUser())) {
-						dataModel.addRow( new Object[] {c.getTitle(), c.getSport(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getFinishDate()), c.getDistance() + " km - "+c.getDuration()+" min"} );
-					}
+					fillModel();
 					dataT.setModel(dataModel);
 				}
 				repaint();
@@ -174,10 +170,21 @@ public class TrainingSessionsWindow extends JFrame{
 		name = new JLabel(tsc.getUser().getEmail());
 		buttons.add(back);
 		buttons.add(createT);
+		buttons.add(challengeT);
 		getContentPane().add(name,BorderLayout.NORTH);
 		getContentPane().add(new JScrollPane(dataT), BorderLayout.CENTER);
 		getContentPane().add(buttons, BorderLayout.SOUTH);
 		setVisible(true);
 		setSize(800,800);
+	}
+	public void fillModel() {
+		headers = new Vector<String>( Arrays.asList( "Title", "sport", "Start Date-End Date", "Distance-Time", "Challenge") );
+		dataModel = new DefaultTableModel(  
+			new Vector<Vector<Object>>(),  
+			headers  
+		);
+		for (TrainingSessionDTO c : controller.getSessions(controller.getUser())) {
+			dataModel.addRow( new Object[] {c.getTitle(), c.getSport(), sdf2.format(c.getStartDate())+ " - " + sdf2.format(c.getFinishDate()), c.getDistance() + " km - "+c.getDuration()+" min", c.getChallenges()} );
+		}
 	}
 }

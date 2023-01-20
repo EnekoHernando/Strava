@@ -24,7 +24,7 @@ public class Challenge implements Comparable<Challenge> {
 	
 	@Join
 	@Persistent(defaultFetchGroup = "true", mappedBy = "challenge", dependentElement = "true")
-	public List<TrainingSession> trss = new ArrayList<>(); 
+	private List<TrainingSession> trss = new ArrayList<>(); 
 	
 	public Challenge() {}
 	
