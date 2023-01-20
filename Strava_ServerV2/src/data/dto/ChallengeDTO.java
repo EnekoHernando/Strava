@@ -55,7 +55,7 @@ public class ChallengeDTO implements Serializable, Comparable<ChallengeDTO>{
 	@Override
 	public boolean equals(Object obj) {
 		if (this.getClass().getName().equals(obj.getClass().getName())) {
-			return this.name.equals(((ChallengeDTO)obj).name) && this.sport.equals(((ChallengeDTO)obj).sport);
+			return this.name.equals(((ChallengeDTO)obj).name) && this.sport.equals(((ChallengeDTO)obj).sport) ;
 		}
 		return false;
 	}

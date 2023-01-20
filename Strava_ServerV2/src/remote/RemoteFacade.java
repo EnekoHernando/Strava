@@ -39,6 +39,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public List<TrainingSessionDTO> getSessions(UserDTO user) throws RemoteException {
+		System.out.println( "GETTING THE SESSIONS---->" + this.serverState.get(user.getToken()).getTraininSL()); //FIXME
 		return TrainingSessionAssembler.getInstance().categoryToDTO(this.serverState.get(user.getToken()).getTraininSL());
 	}
 
@@ -60,16 +61,32 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int dintance, Date startDate,
-			Date finishdate, int duration, int challenge) throws RemoteException {
-		List<Challenge> chL = new ArrayList<Challenge>();
-		chL.addAll(this.serverState.get(user.getToken()).getChallengeA().keySet());
-		TrainingSession ts = TrainingAppSessionService.getInstance().createTrainingSession(this.serverState.get(user.getToken()), title, SportAssembler.getInstance().dtoToSport(sport), dintance, startDate, finishdate, duration, chL.get(challenge));
-		this.serverState.get(user.getToken()).getChallengeA().put(ts.getChallenges(), this.serverState.get(user.getToken()).getChallengeA().get(ts.getChallenges())+ts.getDistance());
-		if(!this.serverState.get(user.getToken()).getTraininSL().contains(ts)) {
-			this.serverState.get(user.getToken()).getTraininSL().add(ts);
-			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
+			Date finishdate, int duration, ChallengeDTO challenge) throws RemoteException {
+		Challenge challengeSelected = null;
+		for(Challenge c: this.serverState.get(user.getToken()).getChallengeA().keySet()) {
+			if(ChallengeAssembler.getInstance().equalsDTO(c, challenge)) {
+				challengeSelected = c;
+				break;
+			}
 		}
-		else throw new RemoteException("Trainning session already exists");
+		if(challengeSelected != null) {
+			TrainingSession ts = TrainingAppSessionService.getInstance().createTrainingSession(this.serverState.get(user.getToken()), title, SportAssembler.getInstance().dtoToSport(sport), dintance, startDate, finishdate, duration, challengeSelected);
+			System.out.println("CREADA LA TRAINNING SESSION");//FIXME
+			Float f = this.serverState.get(user.getToken()).getChallengeA().get(ts.getChallenge())+ts.getDistance();
+			System.out.println("CALCULADA LA NUEVA DISTANCIA");//FIXME
+			this.serverState.get(user.getToken()).getChallengeA().replace(ts.getChallenge(), f);
+			System.out.println("MAPA ACTUALIZADO");//FIXME
+			if(!this.serverState.get(user.getToken()).getTraininSL().contains(ts)) {
+				System.out.println("DENTRO DEL IF"); //FIXME
+				this.serverState.get(user.getToken()).getTraininSL().add(ts);
+				
+				System.out.println("User sessions::::::::::" + this.serverState.get(user.getToken()).getTraininSL()); //FIXME
+				
+				UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
+				
+			}
+		}
+		else throw new RemoteException("The selected challenge does not exist.");
 	}
 	/**
 	 * Takes community Challenge and accept them
@@ -102,7 +119,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	
 	@Override
 	public synchronized void logout(UserDTO userdto) throws RemoteException {
-		System.out.println(" * RemoteFacade logout: " + userdto);
+		System.out.println(" * RemoteFacade logout: " + userdto.getEmail());
 		if (this.serverState.containsKey(userdto.getToken())) {
 			this.serverState.remove(userdto.getToken());
 		} else throw new RemoteException("User is not not logged in!");
@@ -112,12 +129,12 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	public synchronized UserDTO login(String email, String password, String type) throws RemoteException {
 		System.out.println(" * RemoteFacade login: " + email + " / " + password);
 		User user = LoginRegisterAppService.getInstance().login(email, password, type, args);
-		System.out.println(" * RemoteFacade Result: " + user);
 		if (user != null) {
 			user.setToken(System.currentTimeMillis());
 			this.serverState.put(user.getToken(), user);
 			return UserAssembler.getInstance().userToDTO(user);
-		}else throw new RemoteException("Login fails!");
+		}
+		throw new RemoteException("Login fails!");
 	}
 
 	@Override

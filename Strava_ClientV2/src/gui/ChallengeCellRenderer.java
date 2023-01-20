@@ -1,5 +1,6 @@
 package gui;
 
+import java.awt.Color;
 import java.awt.Component;
 import java.awt.Font;
 
@@ -33,8 +34,16 @@ public class ChallengeCellRenderer extends JLabel implements TableCellRenderer{
 		if(type.equals("All")) {
 			if(column == 4) {
 				JLabel label = new JLabel();
-				if(((boolean) value)) label.setText("Accepted");
-				else label.setText("Not Accepted");
+				if(((boolean) value)) {
+					label.setText("Accepted");
+					label.setOpaque(true);
+					label.setBackground(new Color(0, 128, 0));
+				}
+				else {
+					label.setText("Not Accepted");
+					label.setOpaque(true);
+					label.setBackground(new Color(255,0,0));
+				}
 				return label;
 			}
 		}

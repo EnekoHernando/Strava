@@ -43,4 +43,7 @@ public class ChallengeAssembler {
 		}
 		return map;
 	}
+	public boolean equalsDTO(Challenge c, ChallengeDTO c2) {
+		return c.getName().equals(c2.getName()) && c.getSport().equals(SportAssembler.getInstance().dtoToSport(c2.getSport()));
+	}
 }

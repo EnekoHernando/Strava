@@ -34,7 +34,8 @@ public class UserDAO extends DataAccessObjectBase implements IDataAccessObject<U
 	    	pm.makePersistent(user);
 	    	tx.commit();
 	     } catch (Exception ex) {
-		   	System.out.println("   $ Error retreiving an extent: " + ex.getStackTrace());
+		   	System.out.println("   $ Error retreiving an extent: ");
+		   	ex.printStackTrace();
 	     } finally {
 		   	if (tx != null && tx.isActive()) {
 		   		tx.rollback();
@@ -66,7 +67,7 @@ public class UserDAO extends DataAccessObjectBase implements IDataAccessObject<U
 
 			tx.commit();
 		} catch (Exception ex) {
-			System.out.println("  $ Error retrieving all the Articles: " + ex.getMessage());
+			System.out.println("  $ Error retrieving all the Users: " + ex.getMessage());
 		} finally {
 			if (tx != null && tx.isActive()) {
 				tx.rollback();
@@ -90,7 +91,6 @@ public class UserDAO extends DataAccessObjectBase implements IDataAccessObject<U
 			Query<?> query = pm.newQuery("SELECT FROM " + User.class.getName() + " WHERE email == '"+param+"'");
 			query.setUnique(true);
 			result = (User) query.execute();
-			System.out.println("QUERY RESULT ==== " + result); //FIXME
 			tx.commit();
 		} catch (Exception ex) {
 			System.out.println("  $ Error querying an User: " + ex.getMessage());

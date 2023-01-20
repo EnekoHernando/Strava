@@ -26,7 +26,7 @@ public class TrainingAppSessionService {
 		ts.setDuration(duration);
 		ts.setStartDate(startDate);
 		ts.setFinishDate(finishdate);
-		ts.setChallenges(c);
+		ts.setChallenge(c);
 		return ts; 
 	}
 }

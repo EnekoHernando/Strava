@@ -32,7 +32,7 @@ public class DataAccessObjectBase {
 		Transaction tx = pm.currentTransaction();
 		try {
 			tx.begin();
-			System.out.println("   * Storing a User: "+ object);
+			System.out.println("* Storing a User: "+ object);
 			pm.makePersistent(object);
 			tx.commit();
 		} catch (Exception ex) {

@@ -22,7 +22,7 @@ public class TrainingSessionAssembler {
 		dto.setStartDate(ts.getStartDate());
 		dto.setFinishDate(ts.getFinishDate());
 		dto.setDuration(ts.getDuration());
-		dto.setChallenges(ChallengeAssembler.getInstance().challengeToDTO(ts.getChallenges()));
+		dto.setChallenges(ChallengeAssembler.getInstance().challengeToDTO(ts.getChallenge()));
 		return dto;
 	}
 	public List<TrainingSessionDTO> categoryToDTO(List<TrainingSession> ts){

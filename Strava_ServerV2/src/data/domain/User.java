@@ -44,7 +44,7 @@ public class User {
 	@Join
 	private Map<Challenge, Float> challengeA = new TreeMap<Challenge, Float>();
 	
-	@Persistent(defaultFetchGroup="true")
+	@Persistent(defaultFetchGroup = "true", mappedBy = "owner", dependentElement = "true")
 	@Join
 	private List<TrainingSession> traininSL = new ArrayList<TrainingSession>();
 		
@@ -57,22 +57,6 @@ public class User {
 		this.challengeA = challengeA;
 	}
 	
-	/*public List<Challenge> getChallengeAL() {
-		return challengeAL;
-	}
-
-	public void setChallengeAL(List<Challenge> challengeAL) {
-		this.challengeAL = challengeAL;
-	}
-
-	public List<Challenge> getChallengeCL() {
-		return challengeCL;
-	}
-
-	public void setChallengeCL(List<Challenge> challengeCL) {
-		this.challengeCL = challengeCL;
-	}*/
-
 	public List<TrainingSession> getTraininSL() {
 		return traininSL;
 	}

@@ -8,10 +8,12 @@ import javax.jdo.annotations.Persistent;
 
 @PersistenceCapable
 public class TrainingSession {
-	@Persistent(defaultFetchGroup="true", mappedBy="traininSL", dependentElement = "true")
+	
+	@Persistent(defaultFetchGroup="true")
 	private User owner;
 	
 	private String title;
+	
 	@Extension(vendorName="datanucleus", key="enum-value-getter", value="getValue")	
 	private Sport sport;
 	private int distance;
@@ -36,12 +38,12 @@ public class TrainingSession {
 		this.duration = duration;
 	}
 
-	public Challenge getChallenges() {
+	public Challenge getChallenge() {
 		return challenge;
 	}
 
-	public void setChallenges(Challenge challenges) {
-		this.challenge = challenges;
+	public void setChallenge(Challenge challenge) {
+		this.challenge = challenge;
 	}
 
 	public String getTitle() {

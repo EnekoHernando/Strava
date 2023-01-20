@@ -7,6 +7,7 @@ import java.util.List;
 
 import remote.ServiceLocator;
 import data.dto.UserDTO;
+import data.dto.ChallengeDTO;
 import data.dto.SportDTO;
 import data.dto.TrainingSessionDTO;
 
@@ -32,7 +33,7 @@ public class TrainingSessionController {
 		return new ArrayList<>(Arrays.asList(new TrainingSessionDTO()));
 	}
 	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int distance,
-			Date startDate, Date finishdate, int duration, int challenge) {
+			Date startDate, Date finishdate, int duration, ChallengeDTO challenge) {
 		try {
 			this.servicelocator.getService().createTrainingSession(user,title,sport,distance,startDate,finishdate,duration, challenge);
 		} catch (Exception e) {

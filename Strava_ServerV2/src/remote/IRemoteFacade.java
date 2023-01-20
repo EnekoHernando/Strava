@@ -22,7 +22,7 @@ public interface IRemoteFacade extends Remote {
 	public void createChallenge(UserDTO user, String name, Date startDate, Date endDate, float targetDistance, int targetTime, SportDTO sport) throws RemoteException;
 	public void acceptChallenge(UserDTO user, int challenge) throws RemoteException;
 	public List<TrainingSessionDTO> getSessions(UserDTO user) throws RemoteException;
-	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int dintance, Date startDate, Date finishdate, int duration, int challenge) throws RemoteException;
+	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int dintance, Date startDate, Date finishdate, int duration, ChallengeDTO challenge) throws RemoteException;
 	public String getMapChallenge(UserDTO user, int selectedRow) throws RemoteException;
 	public void modifyMapChallenge(UserDTO user, int selectedRow, float value) throws RemoteException;
 }
