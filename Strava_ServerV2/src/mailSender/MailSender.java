@@ -13,8 +13,8 @@ import javax.mail.internet.MimeMessage;
 import data.domain.Challenge;
 
 public class MailSender {
-	private final String from = "StravaTW4@gmail.com";
-	private final String password = "TeamWork4";
+	private final String from = "stravatw4@gmail.com";
+	private final String password = "teamworkstrava4";
 	private final String host = "smtp.gmail.com";
 	private final String port = "587";
 	private String subject = "You have created a new Challenge called ";
@@ -22,7 +22,7 @@ public class MailSender {
 	
 	private Properties props;
 
-	public MailSender(String receiverEmail, String name) {
+	public MailSender(String receiverEmail) {
 		to = receiverEmail;
 		props = new Properties();
 		props.put("mail.smtp.user", from);
@@ -39,7 +39,7 @@ public class MailSender {
 			Session session = Session.getInstance(props, auth);
 			session.setDebug(true);
 			MimeMessage msg = new MimeMessage(session);
-			msg.setText(challenge.longToString());
+			msg.setText(challenge.longToString().trim());
 			msg.setSubject(subject + "'"+ challenge.getName()+"' :");
 			msg.setFrom(new InternetAddress(from));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
