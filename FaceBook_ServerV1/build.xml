@@ -1,14 +1,10 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<project basedir="." default="help" name="FaceBook_ServerV1">    
+<project basedir="." default="server" name="FaceBook_ServerV1">    
 	<property environment="env"/>
 	<property name="source.dir" location="src"/>
    	<property name="build.dir" location="bin"/>
 	<property name="classpath" location="${build.dir}"/>
 	<property name="server.port" value="8001"/>
-
-	<target name="help">
-			<echo>Usage: ant [build | server]</echo>
-		</target>	
 	
 	<target name="build" description="Builds the project">
 		<delete dir="${build.dir}"/>
