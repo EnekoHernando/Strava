@@ -100,4 +100,10 @@ public class Challenge implements Comparable<Challenge> {
 	public int compareTo(Challenge o) {
 		return o.getName().compareTo(name);	
 	}
+
+	public String longToString() {
+		
+		return "Challenge information: name=" + name + ", startDate=" + startDate + ", endDate=" + endDate + ", targetDistance="
+				+ targetDistance + ", targetTime=" + targetTime + ", sport=" + sport;
+	}
 }

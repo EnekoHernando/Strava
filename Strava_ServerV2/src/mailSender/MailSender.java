@@ -10,19 +10,20 @@ import javax.mail.Transport;
 import javax.mail.internet.InternetAddress;
 import javax.mail.internet.MimeMessage;
 
+import data.domain.Challenge;
+
 public class MailSender {
 	private final String from = "deusto.sd@gmail.com";
 	private final String password = "yzbipwiferkviomi";
 	private final String host = "smtp.gmail.com";
 	private final String port = "587";
-	private String subject = "You have created a new Challenge called: ";
+	private String subject = "You have created a new Challenge called ";
 	private String to;
 	
 	private Properties props;
 
 	public MailSender(String receiverEmail, String name) {
 		to = receiverEmail;
-		subject += name + ".";
 		props = new Properties();
 		props.put("mail.smtp.user", from);
 		props.put("mail.smtp.host", host);
@@ -32,14 +33,14 @@ public class MailSender {
 		props.put("mail.smtp.debug", "false");
 	}
 
-	public String sendMessage(String text) {
+	public String sendMessage(Challenge challenge) {
 		try {
 			Authenticator auth = new SMTPAuthenticator();
 			Session session = Session.getInstance(props, auth);
 			session.setDebug(true);
 			MimeMessage msg = new MimeMessage(session);
-			msg.setText(text.trim());
-			msg.setSubject(subject);
+			msg.setText(challenge.longToString());
+			msg.setSubject(subject + "'"+ challenge.getName()+"' :");
 			msg.setFrom(new InternetAddress(from));
 			msg.addRecipient(Message.RecipientType.TO, new InternetAddress(to));
 			Transport.send(msg);
