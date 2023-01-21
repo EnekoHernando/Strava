@@ -13,8 +13,8 @@ import javax.mail.internet.MimeMessage;
 import data.domain.Challenge;
 
 public class MailSender {
-	private final String from = "deusto.sd@gmail.com";
-	private final String password = "yzbipwiferkviomi";
+	private final String from = "StravaTW4@gmail.com";
+	private final String password = "TeamWork4";
 	private final String host = "smtp.gmail.com";
 	private final String port = "587";
 	private String subject = "You have created a new Challenge called ";
