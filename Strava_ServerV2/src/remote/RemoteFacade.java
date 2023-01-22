@@ -39,12 +39,13 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public List<TrainingSessionDTO> getSessions(UserDTO user) throws RemoteException {
-		System.out.println( "GETTING THE SESSIONS---->" + this.serverState.get(user.getToken()).getTraininSL()); //FIXME
+		System.out.println(" * RemoteFacade getting Sessions: ");
 		return TrainingSessionAssembler.getInstance().categoryToDTO(this.serverState.get(user.getToken()).getTraininSL());
 	}
 
 	@Override
 	public String getMapChallenge(UserDTO user, int selectedRow) {
+		System.out.println(" * RemoteFacade get the progess of a challenge");
 		List<Challenge> chL = new ArrayList<Challenge>();
 		chL.addAll(this.serverState.get(user.getToken()).getChallengeA().keySet());
 		this.serverState.get(user.getToken()).calculateProgress();
@@ -57,6 +58,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	@Override
 	public void createTrainingSession(UserDTO user, String title, SportDTO sport, int dintance, Date startDate,
 			Date finishdate, int duration, ChallengeDTO challenge) throws RemoteException {
+		System.out.println(" * RemoteFacade creating a training session");
 		Challenge challengeSelected = null;
 		for(Challenge c: this.serverState.get(user.getToken()).getChallengeA().keySet()) {
 			if(ChallengeAssembler.getInstance().equalsDTO(c, challenge)) {
@@ -66,14 +68,9 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 		}
 		if(challengeSelected != null) {
 			TrainingSession ts = TrainingAppSessionService.getInstance().createTrainingSession(this.serverState.get(user.getToken()), title, SportAssembler.getInstance().dtoToSport(sport), dintance, startDate, finishdate, duration, challengeSelected);
-			System.out.println("CREADA LA TRAINNING SESSION");//FIXME
 			challengeSelected.getTrss().add(ts);
 			if(!this.serverState.get(user.getToken()).getTraininSL().contains(ts)) {
-				System.out.println("DENTRO DEL IF"); //FIXME
 				this.serverState.get(user.getToken()).getTraininSL().add(ts);
-				
-				System.out.println("User sessions::::::::::" + this.serverState.get(user.getToken()).getTraininSL()); //FIXME
-				
 				UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
 				
 			}
@@ -86,6 +83,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	 */
 	@Override
 	public void acceptChallenge(UserDTO user, int challenge) throws RemoteException {
+		System.out.println(" * RemoteFacade challenge accepted: ");
 		if(!this.serverState.get(user.getToken()).getChallengeA().containsKey(ChallengeDAO.getInstance().getAll().get(challenge))) {
 			this.serverState.get(user.getToken()).getChallengeA().put(ChallengeDAO.getInstance().getAll().get(challenge), 0f);
 			UserDAO.getInstance().updateUser(this.serverState.get(user.getToken()));
@@ -94,17 +92,20 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 
 	@Override
 	public Map<ChallengeDTO, Float> getAcceptedChallenges(UserDTO user) throws RemoteException {
+		System.out.println(" * RemoteFacade recover accepted challenges: ");
 		this.serverState.get(user.getToken()).calculateProgress();
 		return ChallengeAssembler.getInstance().mapToDTO(this.serverState.get(user.getToken()).getChallengeA());
 	}
 
 	@Override
 	public List<ChallengeDTO> recoverAllChallenges() throws RemoteException {
+		System.out.println(" * RemoteFacade recover all challenge: ");
 		return ChallengeAssembler.getInstance().categoryToDTO(ChallengeDAO.getInstance().getAll());
 	}
 	
 	@Override
 	public void createChallenge(UserDTO user, String name, Date startDate, Date endDate, float targetDistance, int targetTime, SportDTO sport) throws RemoteException {
+		System.out.println(" * RemoteFacade challenge created ");
 		Challenge created = ChallengeAppService.getInstance().createChallenge(name, startDate, endDate, targetDistance, targetTime,SportAssembler.getInstance().dtoToSport(sport));
 		ChallengeDAO.getInstance().save(created);
 		new MailSender(user.getEmail()).sendMessage(created);
@@ -134,6 +135,7 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	@Override
 	public UserDTO register(String type, String email,String password, Date birth, float weight, int height, int maxHeartRate, int heartRateAtRest)
 			throws RemoteException {
+		System.out.println(" * RemoteFacade register: " + email + " / " + password);
 		User user = LoginRegisterAppService.getInstance().register(email, password, birth, weight, height, maxHeartRate, heartRateAtRest, type, args);
 		if(user != null) {
 			Long token = System.currentTimeMillis();

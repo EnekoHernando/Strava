@@ -149,9 +149,6 @@ public class Challenge_Window extends JFrame{
 			public void actionPerformed(ActionEvent e) {
 				accepting=false;
 				modelTable("Accepted");
-				for(int i = 0; i<tableC.getRowCount();i++) {
-					System.out.println(tableC.getValueAt(i, 0));
-				}
 				tableC.getColumnModel().getColumn(0).setMinWidth(200);
 				tableC.getColumnModel().getColumn(0).setMaxWidth(200);
 				tableC.getColumnModel().getColumn(1).setMinWidth(100);
