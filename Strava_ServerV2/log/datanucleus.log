@@ -3503,3 +3503,323 @@
 14:01:09,352 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
 14:01:09,353 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
 14:01:09,353 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:29,768 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+15:20:29,842 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+15:20:29,847 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+15:20:29,853 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+15:20:29,854 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 3 clases.
+15:20:30,323 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Eliminación del esquema para clases
+15:20:30,323 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+15:20:30,323 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+15:20:30,323 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+15:20:30,323 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+15:20:30,323 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+15:20:30,324 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+15:20:30,894 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender$SMTPAuthenticator.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+15:20:30,895 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+15:20:31,114 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+15:20:31,580 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+15:20:31,580 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+15:20:31,580 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+15:20:31,580 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+15:20:31,581 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender$SMTPAuthenticator.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+15:20:32,103 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+15:20:32,227 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+15:20:32,227 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+15:20:32,251 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+15:20:32,269 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+15:20:32,581 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+15:20:33,915 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:33,923 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:33,982 (main) INFO  [DataNucleus.General] - Query has field data.domain.User.challengeA marked in the FetchPlan, yet this is currently not (bulk) fetched by this query
+15:20:34,003 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@2e47860f" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@6a7d5bb1" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+15:20:34,003 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@2e47860f" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@313ef81a" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+15:20:34,003 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@2e47860f" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@88fe5c6b" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+15:20:34,006 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@47f7f6c3" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@173e0da1" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+15:20:34,006 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@47f7f6c3" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@2bf205e4" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+15:20:34,006 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@47f7f6c3" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@fcab4356" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+15:20:34,011 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,011 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,011 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,012 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,012 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,012 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,014 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,015 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,018 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,018 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,019 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,019 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,019 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:20:34,019 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,798 (RMI TCP Connection(3)-192.168.1.101) INFO  [DataNucleus.General] - Query has field data.domain.User.challengeA marked in the FetchPlan, yet this is currently not (bulk) fetched by this query
+15:22:34,879 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,879 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,879 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,879 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,880 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,880 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,880 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:22:34,880 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,909 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,909 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,909 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,910 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,910 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,910 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,910 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:01,910 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,177 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,178 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,178 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,178 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,178 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,178 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,178 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:19,178 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,220 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,220 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,221 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,221 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,221 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,221 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,221 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,221 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,233 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,233 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,233 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,233 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,233 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,233 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,234 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:24:22,234 (RMI TCP Connection(4)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:27,600 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "9[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,279 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "9[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,279 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,279 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,279 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,280 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,280 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,280 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,280 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:33,280 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,832 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "9[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,832 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,833 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,833 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,833 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,833 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,833 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,833 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+15:25:58,833 (RMI TCP Connection(5)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:13:57,131 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer (versión 6.0.1) para el API "JDO" utilisando el JRE "{2}"
+11:13:57,231 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class" con definicion enhanced
+11:13:57,239 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class" con definicion enhanced
+11:13:57,248 (main) INFO  [DataNucleus.Enhancer] - Escribiendo el archivo de clase "C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class" con definicion enhanced
+11:13:57,249 (main) INFO  [DataNucleus.Enhancer] - DataNucleus Enhancer ha terminado con exito para 3 clases.
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Eliminación del esquema para clases
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:13:57,842 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:13:57,843 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+11:13:57,843 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:13:57,843 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+11:13:57,843 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:13:57,843 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:13:57,843 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:13:57,843 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+11:13:58,702 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+11:13:58,702 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+11:13:58,702 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender$SMTPAuthenticator.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+11:13:58,703 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+11:13:58,992 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+11:13:59,587 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Creación del esquema para clases
+11:13:59,587 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Classpath
+11:13:59,587 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\Google.jar
+11:13:59,587 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\commons-codec-1.15.jar
+11:13:59,587 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-api-jdo-6.0.1.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-cache-6.0.0-release.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-core-6.0.1.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\datanucleus-rdbms-6.0.1.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.activation-1.2.0.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.jdo-3.2.1.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\javax.mail.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\log4j-1.2.14.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\lib\mysql-connector-java-8.0.29.jar
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin
+11:13:59,588 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\resources
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool : Ficheros
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\ChallengeDAO.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\DataAccessObjectBase.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\IDataAccessObject.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\dao\UserDAO.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Challenge.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\Sport.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\TrainingSession.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\domain\User.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeAssembler.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\ChallengeDTO.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportAssembler.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\SportDTO.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionAssembler.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\TrainingSessionDTO.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserAssembler.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\data\dto\UserDTO.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\factories\Factory.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayFacebook.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\GateWayGoogle.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\gateways\IGateWay.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender$SMTPAuthenticator.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\mailSender\MailSender.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\IRemoteFacade.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\remote\RemoteFacade.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\server\MP.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\ChallengeAppService.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\LoginRegisterAppService.class
+11:14:00,270 (main) INFO  [DataNucleus.SchemaTool] - >>  C:\SoftLabs\SD\Strava\Strava_ServerV2\bin\services\TrainingAppSessionService.class
+11:14:00,457 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:14:00,457 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:14:00,511 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:14:00,534 (main) WARN  [DataNucleus.Datastore] - SQL Warning : 'BINARY as attribute of a type' is deprecated and will be removed in a future release. Please use a CHARACTER SET clause with _bin collation instead
+11:14:00,987 (main) INFO  [DataNucleus.SchemaTool] - DataNucleus SchemaTool ha terminado con exito
+11:14:02,700 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,716 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,734 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@ecb7bce7" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@12042aea" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:14:02,736 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@ecb7bce7" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@6fc31f5a" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:14:02,738 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@ecb7bce7" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@ec708db5" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:14:02,742 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@69875182" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@39f794c" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:14:02,744 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@69875182" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@3df6e9d" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:14:02,746 (main) INFO  [DataNucleus.Persistence] - El objeto "data.domain.Challenge@69875182" tiene una colleccion "data.domain.Challenge.trss" pero el elemento "data.domain.TrainingSession@94ed7c8d" no tiene el dueño puesto. Manejando la relación y poniendo el dueño.
+11:14:02,759 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,759 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,759 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,759 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,759 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,759 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,763 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,765 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,769 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,770 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,770 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,770 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,770 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:02,770 (main) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,530 (RMI TCP Connection(3)-192.168.1.101) INFO  [DataNucleus.General] - Query has field data.domain.User.challengeA marked in the FetchPlan, yet this is currently not (bulk) fetched by this query
+11:14:38,635 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,636 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,636 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,637 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,637 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,637 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,637 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:38,637 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,689 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "5[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,690 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "1[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,691 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "2[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,692 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "6[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,693 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "7[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,693 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "8[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,694 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "3[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient
+11:14:52,695 (RMI TCP Connection(3)-192.168.1.101) WARN  [DataNucleus.Persistence] - El objeto con identidad "4[OID]data.domain.TrainingSession" va a ser detachado (con la opcion DetachAllOnCommit?) pero no es detachable, por eso vamos a hacerlo transient

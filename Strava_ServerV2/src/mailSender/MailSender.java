@@ -14,7 +14,10 @@ import data.domain.Challenge;
 
 public class MailSender {
 	private final String from = "stravatw4@gmail.com";
-	private final String password = "teamworkstrava4";
+	private final String password = "hynppkcuxwntyxhk";
+//	private final String from = "deusto.sd@gmail.com";
+//	private final String password = "yzbipwiferkviomi";
+	
 	private final String host = "smtp.gmail.com";
 	private final String port = "587";
 	private String subject = "You have created a new Challenge called ";
