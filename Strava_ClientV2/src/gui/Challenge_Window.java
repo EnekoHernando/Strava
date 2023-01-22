@@ -114,6 +114,14 @@ public class Challenge_Window extends JFrame{
 		userInfo = new JButton("User info");
 		buttons = new JPanel();
 		sesion = new JButton("Trainnig sessions");
+		userInfo.addActionListener(new ActionListener() {
+			
+			@Override
+			public void actionPerformed(ActionEvent e) {
+				new UserWIndow(cw);
+				setVisible(false);
+			}
+		});
 		sesion.addActionListener(new ActionListener() {
 			
 			@Override

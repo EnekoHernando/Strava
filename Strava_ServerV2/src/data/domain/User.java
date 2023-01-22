@@ -135,7 +135,8 @@ public class User {
 		for(Challenge c: challengeA.keySet()) {
 			Float progress = 0f;
 			for(TrainingSession tr : c.getTrss()) {
-				progress+=tr.getDistance();
+				if(c.getEndDate().before(tr.getFinishDate()))
+					progress+=tr.getDistance();
 			}
 			challengeA.put(c, progress);
 		}

@@ -6,7 +6,7 @@ import javax.jdo.annotations.Extension;
 import javax.jdo.annotations.PersistenceCapable;
 import javax.jdo.annotations.Persistent;
 
-@PersistenceCapable
+@PersistenceCapable(detachable = "true")
 public class TrainingSession {
 	
 	@Persistent(defaultFetchGroup="true")
