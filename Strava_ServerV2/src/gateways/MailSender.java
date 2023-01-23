@@ -1,4 +1,4 @@
-package mailSender;
+package gateways;
 
 import java.util.Properties;
 

@@ -304,6 +304,7 @@ public class Challenge_Window extends JFrame{
 				headers  
 			);
 			Map<ChallengeDTO, Float> map = new TreeMap<>(controller.getAcceptedChallenges(controller.getUser()));
+			System.out.println(" MAPAAA DE CHALLENGEEEE: "+map);
 			for (ChallengeDTO c : map.keySet()) {
 				float progress = (map.get(c)/c.getTargetDistance()) *100; 
 				if(progress>100) progress = 100f;

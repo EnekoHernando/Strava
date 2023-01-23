@@ -81,5 +81,6 @@ public class MP {
 		ChallengeDAO.getInstance().save(c1);
 		ChallengeDAO.getInstance().save(c2);
 		ChallengeDAO.getInstance().save(c3);
+		ChallengeDAO.getInstance().save(c4);
 	}
 }

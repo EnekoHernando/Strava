@@ -21,7 +21,7 @@ import data.dto.TrainingSessionAssembler;
 import data.dto.TrainingSessionDTO;
 import data.dto.UserAssembler;
 import data.dto.UserDTO;
-import mailSender.MailSender;
+import gateways.MailSender;
 import services.ChallengeAppService;
 import services.LoginRegisterAppService;
 import services.TrainingAppSessionService;

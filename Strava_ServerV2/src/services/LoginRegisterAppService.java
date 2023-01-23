@@ -32,10 +32,8 @@ public class LoginRegisterAppService{
 	public User register(String email,String password, Date birth, float weight, int height, int maxHeartRate, int heartRateAtRest, String type, String [] args) throws RemoteException {
 		User user = new User();
 		if(type.equals("Normal") || Factory.getInstance().createGateWay(type, args).register(email.toLowerCase(), password)) {
-			System.out.println("HEMOS ENTRADO EN EL IF DE SELECCION");//FIXME
 			try {
 				if(UserDAO.getInstance().find(email)==null) {
-					System.out.println("HEMOS ENTRADO EN EL IF DE COMPROBACION");//FIXME
 					user.setEmail(email.toLowerCase());
 					if(type.equals("Normal")) user.setPassword(org.apache.commons.codec.digest.DigestUtils.sha1Hex(password));
 					else user.setPassword("");
