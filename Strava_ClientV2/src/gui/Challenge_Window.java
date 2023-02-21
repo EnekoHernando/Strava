@@ -70,6 +70,7 @@ public class Challenge_Window extends JFrame{
 	
 	public Challenge_Window(ChallengeController cC, LogIn_Window lw) {
 		cw = this;
+		
 		//FIELD INSTANCES FOR THE CREATING OF THE CHALLENGE
 		nameL=new JLabel("Name: ");
 		nameT = new JTextField("",150);
