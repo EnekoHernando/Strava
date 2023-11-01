@@ -105,8 +105,8 @@ public class RemoteFacade extends UnicastRemoteObject implements IRemoteFacade {
 	
 	@Override
 	public void createChallenge(UserDTO user, String name, Date startDate, Date endDate, float targetDistance, int targetTime, SportDTO sport) throws RemoteException {
-		System.out.println(" * RemoteFacade challenge created ");
 		Challenge created = ChallengeAppService.getInstance().createChallenge(name, startDate, endDate, targetDistance, targetTime,SportAssembler.getInstance().dtoToSport(sport));
+		System.out.println(" * RemoteFacade challenge created ");
 		ChallengeDAO.getInstance().save(created);
 		new MailSender(user.getEmail()).sendMessage(created);
 		System.out.println("Mail with the challenge information sended to: " + user.getEmail());
